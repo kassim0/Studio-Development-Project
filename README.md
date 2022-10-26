@@ -14,11 +14,14 @@
 
 ## Communication Strategy:
   Whatsapp Group
+  
   Discord Meetings
   
 ## Technologies:
   Front : 
+  
   Back : Java (Spring)
+  
   Data Base : SQL
 
 ## Installation Manual:

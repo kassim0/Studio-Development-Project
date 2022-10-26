@@ -18,9 +18,8 @@
   Discord Meetings
   
 ## Technologies:
-  Front : 
-  
-  Back : Java (Spring)
+  /nFront : 
+  /nBack : Java (Spring)
   
   Data Base : SQL
 

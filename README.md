@@ -1,14 +1,20 @@
 # Studio-Development-Project
 
-Roles and Responsabilities:
-  Scrum Master- Adrian Hernandez Monterroso
-  Product Owner- Carolina Araújo Castro
-  Developers- Ana Isabel Lopes Pinheiro
-            Francisco Javier Oliver Cortes
-            Kaasim HADDAD
+## Roles and Responsabilities:
+  
+ -Adrian Hernandez Monterroso is the Scrum Master, responsible for
+  
+ -Carolina Araújo Castro is the Product Owner, responsible for
+  
+ -Ana Isabel Lopes Pinheiro is a Developer
+ 
+ -Francisco Javier Oliver Cortes is a Developer
+  
+ -Kaasim HADDAD is a Developer
 
-Communication Strategy:
+## Communication Strategy:
   Whatsapp Group
   Discord Meetings
 
-Installation Manual:
+## Installation Manual:
+  Where you are going to explain how to install our system.

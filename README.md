@@ -2,9 +2,9 @@
 
 ## Roles and Responsabilities:
   
- -Adrian Hernandez Monterroso is the Scrum Master, responsible for
+ -Adrian Hernandez Monterroso is the Scrum Master
   
- -Carolina Araújo Castro is the Product Owner, responsible for
+ -Carolina Araújo Castro is the Product Owner
   
  -Ana Isabel Lopes Pinheiro is a Developer
  

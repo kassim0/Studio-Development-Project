@@ -10,7 +10,7 @@
  
  -Francisco Javier Oliver Cortes is a Developer
   
- -Kaasim HADDAD is a Developer
+ -Kassim HADDAD is a Developer
 
 ## Communication Strategy:
   Whatsapp Group

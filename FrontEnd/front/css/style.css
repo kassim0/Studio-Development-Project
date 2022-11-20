@@ -523,7 +523,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-header .display-tc .btn,
 #fh5co-counter .display-tc .btn,
 .fh5co-cover .display-tc .btn {
-  padding: 15px 30px;
+  padding: 3px 10px;
   background: #0C9CEE;
   color: #fff;
   border: none !important;
@@ -656,9 +656,9 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-blog .fh5co-post h3 a {
   color: #0C9CEE;
 }
-#fh5co-blog .fh5co-post h3 a:hover {
+/*#fh5co-blog .fh5co-post h3 a:hover {
   color: #f35f55;
-}
+}*/
 #fh5co-blog .fh5co-post .fh5co-date {
   display: block;
   margin-bottom: 10px;
@@ -1691,7 +1691,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .row-pb-md {
-  padding-bottom: 4em !important;
+  padding-bottom: 1em !important;
 }
 
 .row-pb-sm {
@@ -1722,5 +1722,6 @@ h1, h2, h3, h4, h5, h6, figure {
   border-top-left-radius: 0px !important;
   border-bottom-left-radius: 0px !important;
 }
+
 
 /*# sourceMappingURL=style.css.map */

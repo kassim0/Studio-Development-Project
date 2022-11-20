@@ -1,16 +1,31 @@
 # Studio-Development-Project
 
 ## Roles and Responsabilities:
+This file describes the roles and the responsabilities of each member of the project.
+
+* **Product Owner** Carolina Araújo Castro
+
+  * Develops and communicates the Product Goal;
+  * Propose and control the Product Backlog;
+  * Make sure that the team understands the items on the Product Backlog;
+  * Maximize the value of the product.
   
- -Adrian Hernandez Monterroso is the Scrum Master - Helps the product owner with the backlog, its the one who knows the most about SCRUM, organize the reunions
+* **Scrum Master** Adrian Hernandez Monterroso
+
+  * Helps the product owner with the Product Backlog;
+  * Helps the team on their work and remove their problems;
+  * Has the most knowledge out SCRUM;
+  * Organize the reunions.
   
- -Carolina Araújo Castro is the Product Owner - propose and control the backlog, know the product goal.
-  
- -Ana Isabel Lopes Pinheiro is a Developer - achive the sprints, do the task, discuss with the product owner, inform the scrum master
+* **Developers** Ana Isabel Lopes Pinheiro, Francisco Javier Oliver Cortes and Kassim HADDAD
+
+  * Create plans for the sprints and achive them;
+  * Assure that the increment meets the Definition of Done
+  * Complete the tasks;
+  * Discuss with the product owner;
+  * Adapt the plan
+  * Inform the scrum master.
  
- -Francisco Javier Oliver Cortes is a Developer - achive the sprints, do the task, discuss with the product owner, inform the scrum master
-  
- -Kassim HADDAD is a Developer - achive the sprints, do the task, discuss with the product owner, inform the scrum master
 
 ## Communication Strategy:
   Whatsapp Group

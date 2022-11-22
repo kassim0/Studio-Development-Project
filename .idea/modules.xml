@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/FrontEnd/FrontLA.iml" filepath="$PROJECT_DIR$/FrontEnd/FrontLA.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Studio-Development-Project.iml" filepath="$PROJECT_DIR$/.idea/Studio-Development-Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/postgresql2/postgresql2/postgresql2.iml" filepath="$PROJECT_DIR$/postgresql2/postgresql2/postgresql2.iml" />
     </modules>
   </component>
 </project>

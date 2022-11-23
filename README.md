@@ -17,7 +17,7 @@ This file describes the roles and the responsabilities of each member of the pro
   * Has the most knowledge out SCRUM;
   * Organize the reunions.
   
-* **Developers** Ana Isabel Lopes Pinheiro, Kassim HADDAD and Carolina Araújo Castro
+* **Developers** Ana Isabel Lopes Pinheiro, Kassim HADDAD, Carolina Araújo Castro and Amine Ceyda Tandogan
 
   * Create plans for the sprints and achive them;
   * Assure that the increment meets the Definition of Done

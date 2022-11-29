@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/postgresql2/postgresql2.iml" filepath="$PROJECT_DIR$/postgresql2/postgresql2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/demo.iml" filepath="$PROJECT_DIR$/.idea/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learningboot/learningboot.iml" filepath="$PROJECT_DIR$/learningboot/learningboot.iml" />
     </modules>
   </component>
 </project>

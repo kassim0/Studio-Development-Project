@@ -3,7 +3,7 @@
 ## Roles and Responsabilities:
 This file describes the roles and the responsabilities of each member of the project.
 
-* **Product Owner** Carolina Araújo Castro
+* **Product Owner** Francisco Javier Oliver Cortes
 
   * Develops and communicates the Product Goal;
   * Propose and control the Product Backlog;
@@ -17,7 +17,7 @@ This file describes the roles and the responsabilities of each member of the pro
   * Has the most knowledge out SCRUM;
   * Organize the reunions.
   
-* **Developers** Ana Isabel Lopes Pinheiro, Francisco Javier Oliver Cortes and Kassim HADDAD
+* **Developers** Ana Isabel Lopes Pinheiro, Kassim HADDAD, Carolina Araújo Castro and Amine Ceyda Tandogan
 
   * Create plans for the sprints and achive them;
   * Assure that the increment meets the Definition of Done

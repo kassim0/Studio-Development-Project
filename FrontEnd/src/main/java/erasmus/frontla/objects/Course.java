@@ -1,14 +1,6 @@
-package accesingdatamysql.entity;
+package erasmus.frontla.objects;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity // This tells Hibernate to make a table out of this class
 public class Course {
-    @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
 
     private String name;
@@ -45,7 +37,8 @@ public class Course {
         return credits;
     }
 
-    public void setCredits(Integer credits) {
+    public void setCredits(Integer id) {
         this.credits = credits;
     }
 }
+

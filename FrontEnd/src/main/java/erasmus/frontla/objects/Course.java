@@ -37,7 +37,7 @@ public class Course {
         return credits;
     }
 
-    public void setCredits(Integer id) {
+    public void setCredits(Integer credits) {
         this.credits = credits;
     }
 }

@@ -4,8 +4,15 @@ import erasmus.frontla.objects.Course;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpRequest.BodyPublishers;
+
 
 import java.lang.reflect.Type;
+import java.net.http.HttpResponse;
 import java.util.List;
 
 public class CoursePetitions {
@@ -25,48 +32,52 @@ public class CoursePetitions {
     final static String linkStatic = "http://localhost:8080/course";
 
 
-    public List<Course> getAllCurso(){
+    public List<Course> getAllCurso() throws Exception {
 
         Gson gsonMod = new Gson();
+        HttpRequest a= HttpRequest.newBuilder()
+                .uri(new URI(linkStatic+"/all"))
+                .GET()
+                .build();
+        HttpClient httpClient = HttpClient.newHttpClient();
+        HttpResponse<String> response = httpClient.send(a, HttpResponse.BodyHandlers.ofString());
 
-        try {
+        Type listType = new TypeToken<List<Course>>() {}.getType();
+        List<Course> curso = gsonMod.fromJson(response.body(), listType);
 
-            String response = HTTPWrapper.SetRequest(linkStatic+"/all", "GET");
-            Type listType = new TypeToken<List<Course>>() {}.getType();
-            List<Course> cursos = gsonMod.fromJson(response.toString(), listType);
-            return cursos;
-
-        }catch(Exception e){}
-
-        return null;
+        return curso;
     }
-    public Course getCourse(int id){
+    public Course getCourse(int id) throws Exception {
 
         Gson gsonMod = new Gson();
-        System.out.println("OK");
-        try {
+        HttpRequest a= HttpRequest.newBuilder()
+                .uri(new URI(linkStatic+"/?id="+id))
+                .GET()
+                .build();
+        HttpClient httpClient = HttpClient.newHttpClient();
+        HttpResponse<String> response = httpClient.send(a, HttpResponse.BodyHandlers.ofString());
 
-            String response = HTTPWrapper.SetRequest(linkStatic+"/"+id, "GET");
-            Course course = gsonMod.fromJson(response.toString(), Course.class);
-            System.out.println("OKWW");
-            return course;
+        Course curso = gsonMod.fromJson(response.body(), Course.class);
 
-        }catch(Exception e){}
-
-        return null;
+        return curso;
     }
-    public Course createCourse(int id){
+    public Course createCourse(Course a) throws Exception{
 
         Gson gsonMod = new Gson();
+        String jsonRequest = gsonMod.toJson(a);
+        System.out.println(jsonRequest);
+        HttpClient httpClient = HttpClient.newHttpClient();
 
-        try {
+        HttpRequest b= HttpRequest.newBuilder()
+                .uri(new URI(linkStatic+"/add"))
+                .POST(HttpRequest.BodyPublishers.ofString(jsonRequest))
+                .header("Content-type","application/json")
+                .build();
 
-            String response = HTTPWrapper.SetRequest(linkStatic+"/add", "PUT");
-            Type listType = new TypeToken<Course>() {}.getType();
-            Course course = gsonMod.fromJson(response.toString(), listType);
-            return course;
 
-        }catch(Exception e){}
+        HttpResponse<String> response = httpClient.send(b, HttpResponse.BodyHandlers.ofString());
+
+        System.out.println(response.body());
 
         return null;
     }

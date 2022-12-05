@@ -62,8 +62,7 @@ public class CourseController {
          if(CourseRepository.existsById(idToSearch)){
              CourseToChange =CourseRepository.findById(idToSearch).get();
          };
-
-
          return null;
     }
+
 }

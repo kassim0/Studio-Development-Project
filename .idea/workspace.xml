@@ -6,21 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9072231f-9931-4fc9-ac46-47dedaece349" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/learningboot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/learningboot/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/learningboot/src/main/java/accesingdatamysql/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/learningboot/src/main/java/accesingdatamysql/controller/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/learningboot/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/learningboot/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/endpoints/CoursePetitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/endpoints/CoursePetitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/endpoints/HTTPWrapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/objects/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/objects/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/target/classes/endpoints/CoursePetitions$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/target/classes/endpoints/CoursePetitions$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/target/classes/endpoints/CoursePetitions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/target/classes/endpoints/HTTPWrapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/HelloController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/target/classes/module-info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/target/classes/objects/Course.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

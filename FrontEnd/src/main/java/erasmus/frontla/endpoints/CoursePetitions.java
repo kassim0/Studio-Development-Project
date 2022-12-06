@@ -65,7 +65,6 @@ public class CoursePetitions {
 
         Gson gsonMod = new Gson();
         String jsonRequest = gsonMod.toJson(a);
-        System.out.println(jsonRequest);
         HttpClient httpClient = HttpClient.newHttpClient();
 
         HttpRequest b= HttpRequest.newBuilder()
@@ -77,7 +76,6 @@ public class CoursePetitions {
 
         HttpResponse<String> response = httpClient.send(b, HttpResponse.BodyHandlers.ofString());
 
-        System.out.println(response.body());
 
         return null;
     }

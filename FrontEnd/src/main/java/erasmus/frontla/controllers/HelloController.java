@@ -1,4 +1,4 @@
-package erasmus.frontla;
+package erasmus.frontla.controllers;
 
 import erasmus.frontla.endpoints.CoursePetitions;
 import erasmus.frontla.objects.Course;

@@ -7,4 +7,6 @@ module erasmus.frontla {
 
     opens erasmus.frontla to javafx.fxml;
     exports erasmus.frontla;
+    exports erasmus.frontla.controllers;
+    opens erasmus.frontla.controllers to javafx.fxml;
 }

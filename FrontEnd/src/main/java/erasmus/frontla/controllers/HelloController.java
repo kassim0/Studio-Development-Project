@@ -16,7 +16,7 @@ public class HelloController {
 
     public String texto() throws Exception {
         CoursePetitions a = CoursePetitions.getInstance();
-        Course v=new Course();
+        Course v=new Course("hola", "sdafda",3);
         v.setCredits(3);
         v.setDefinition("sdafda");
         v.setName("reer");

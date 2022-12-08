@@ -17,7 +17,7 @@ import java.util.List;
 
 public class CoursePetitions {
     private static  CoursePetitions instance;
-    private  CoursePetitions(){
+    public CoursePetitions(){
         instance=this;
     }
 

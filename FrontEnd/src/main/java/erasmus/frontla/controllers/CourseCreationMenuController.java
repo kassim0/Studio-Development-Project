@@ -26,7 +26,8 @@ public class CourseCreationMenuController {
 
     @FXML
     void createCourse(ActionEvent event) throws Exception {
-        Course course = new Course();
+        Course course = new Course(nameField.getText(),descriptionField.getText(),Integer.valueOf(creditsField.getText()));
+
         course.setName(nameField.getText());
         course.setDefinition(descriptionField.getText());
         course.setCredits(Integer.parseInt(creditsField.getText()));

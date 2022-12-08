@@ -1,13 +1,19 @@
 package erasmus.frontla.objects;
 
 public class Course {
-    private Integer id;
+     Integer id;
 
-    private String name;
+     String name;
 
-    private String definition;
+     String definition;
 
-    private Integer credits;
+     Integer credits;
+
+    public Course(String name, String definition, Integer credits) {
+        this.name = name;
+        this.definition = definition;
+        this.credits = credits;
+    }
 
     public Integer getId() {
         return id;

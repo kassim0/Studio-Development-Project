@@ -10,7 +10,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="erasmus.frontla.controllers.CourseCreationMenuController">
    <children>
       <VBox layoutX="6.0" layoutY="14.0" prefHeight="373.0" prefWidth="582.0">
@@ -67,7 +66,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="backButton" mnemonicParsing="false" text="Back">
+                  <Button fx:id="backButton" mnemonicParsing="false" onAction="#backView" text="Back">
                      <HBox.margin>
                         <Insets left="50.0" right="20.0" top="20.0" />
                      </HBox.margin>

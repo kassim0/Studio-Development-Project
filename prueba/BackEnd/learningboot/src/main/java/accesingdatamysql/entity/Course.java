@@ -9,13 +9,13 @@ import javax.persistence.Id;
 public class Course {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private Integer id;
+    public Integer id;
 
-    private String name;
+    public String name;
 
-    private String definition;
+    public String definition;
 
-    private Integer credits;
+    public Integer credits;
 
     public Integer getId() {
         return id;

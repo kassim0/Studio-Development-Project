@@ -42,6 +42,7 @@ public class CourseController {
         };
         return CourseToChange;
     }
+
     @DeleteMapping(path="/delete")
     public @ResponseBody String deleteCourse(@RequestParam String id) {
         // This returns a JSON or XML with the users

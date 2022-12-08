@@ -8,12 +8,17 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.List;
 
 public class SeeCoursesController {
@@ -36,6 +41,10 @@ public class SeeCoursesController {
     @FXML
     private TableColumn<Course, String> tbleName;
 
+    @FXML
+    private Button nuevaVista;
+
+
     HelloController helloController = new HelloController();
 
     private final StringProperty project = new SimpleStringProperty();
@@ -52,6 +61,11 @@ public class SeeCoursesController {
         project.set(value);
     }
 
+
+    @FXML
+    void nuevaVista(ActionEvent event) {
+        
+    }
     @FXML
     void seeCourses(ActionEvent event) throws Exception {
         helloController.texto();
@@ -66,13 +80,10 @@ public class SeeCoursesController {
         listadecursos = coursePetitions.getAllCurso();
 
         for (Course curse : listadecursos) {
-            lst.getItems().add(curse.getName());
+            String nombreAux =curse.getId() + "/" + curse.getName();
 
-            String nombreAux = curse.getName();
-            
+            lst.getItems().add(nombreAux);
         }
-
-
     }
 
     private void poblarTabla() throws Exception{
@@ -109,6 +120,5 @@ public class SeeCoursesController {
 
         table.setItems(listaaaa);
     }
-
 
 }

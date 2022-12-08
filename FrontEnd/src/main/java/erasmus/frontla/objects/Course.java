@@ -1,28 +1,39 @@
 package erasmus.frontla.objects;
 
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.StringProperty;
+
 public class Course {
-    private Integer id;
+    public IntegerProperty id;
 
-    private String name;
+    public StringProperty name;
 
-    private String definition;
+    public String definition;
 
-    private Integer credits;
+    public Integer credits;
 
     public Integer getId() {
-        return id;
+        return id.get();
     }
 
     public void setId(Integer id) {
-        this.id = id;
+        this.id.set(id);
+    }
+
+    public IntegerProperty idProperty() {
+        return id;
     }
 
     public String getName() {
-        return name;
+        return name.get();
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name.set(name);
+    }
+
+    public StringProperty nameProperty() {
+        return name;
     }
 
     public String getDefinition() {
@@ -40,5 +51,6 @@ public class Course {
     public void setCredits(Integer credits) {
         this.credits = credits;
     }
+
 }
 

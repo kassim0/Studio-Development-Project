@@ -1,5 +1,6 @@
 package erasmus.frontla.controllers;
 import erasmus.frontla.Loader;
+import erasmus.frontla.endpoints.CoursePetitions;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -29,7 +30,7 @@ public class CourseCreationController {
         Stage stage = new Stage();
         AnchorPane pane =  Loader.LoaderView("CourseCreationMenu.fxml");
         Scene scene = new Scene(pane);
-        stage.setTitle("Vista Instructor");
+        stage.setTitle("Create");
         stage.setScene(scene);
         stage.show();
         Node n = (Node)event.getSource();
@@ -44,7 +45,22 @@ public class CourseCreationController {
     }
 
     @FXML
-    void modifyCourse(ActionEvent event) {
+    void modifyCourse(ActionEvent event) throws Exception {
+        Stage stage = new Stage();
+        URL paneUrl = Loader.LoaderViewCont("CourseModifySelection.fxml");
+
+        FXMLLoader paneL = new FXMLLoader(paneUrl);
+        AnchorPane pane = paneL.load();
+
+        CourseModifySelectionController controller = paneL.getController();
+        controller.init();
+        Scene scene = new Scene(pane);
+        stage.setTitle("Modify");
+        stage.setScene(scene);
+        stage.show();
+        Node n = (Node)event.getSource();
+        n.getScene().getWindow().hide();
+
 
     }
 }

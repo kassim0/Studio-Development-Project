@@ -4,37 +4,27 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.StringProperty;
 
 public class Course {
-    public IntegerProperty id;
+    private Integer id;
 
-    public StringProperty name;
+    private String name;
 
-    public String definition;
+    private String definition;
 
-    public Integer credits;
+    private Integer credits;
 
     public Integer getId() {
-        return id.get();
-    }
-
-    public void setId(Integer id) {
-        this.id.set(id);
-    }
-
-    public IntegerProperty idProperty() {
         return id;
     }
 
+    public void setId(Integer id) {
+        this.id=id;
+    }
+
     public String getName() {
-        return name.get();
-    }
-
-    public void setName(String name) {
-        this.name.set(name);
-    }
-
-    public StringProperty nameProperty() {
         return name;
     }
+
+    public void setName(String name) {this.name=name;}
 
     public String getDefinition() {
         return definition;

@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9072231f-9931-4fc9-ac46-47dedaece349" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/learningboot/src/main/java/accesingdatamysql/entity/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/learningboot/src/main/java/accesingdatamysql/entity/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/controllers/CourseCreationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/controllers/CourseCreationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/controllers/CourseCreationMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/controllers/CourseCreationMenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/objects/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/objects/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/resources/erasmus/frontla/CourseCreationMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/main/resources/erasmus/frontla/CourseCreationMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/CourseCreationMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/CourseCreationMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/controllers/CourseCreationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/controllers/CourseCreationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/controllers/CourseCreationMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/controllers/CourseCreationMenuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/objects/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/objects/Course.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

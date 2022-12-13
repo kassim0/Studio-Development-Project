@@ -94,7 +94,7 @@ public class SeeCoursesController {
 
             lst.getItems().add(nombreAux);
         }
-        //lst.getSelectionModel().selectedItemProperty().addListener(this::selectionChanged);
+        /*
         lst.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
@@ -108,16 +108,15 @@ public class SeeCoursesController {
                 //System.out.println(curso.getCredits() + " " + curso.getDefinition());
 
             }
-        });
+        });*/
 
     }
-
-    private void selectionChanged(ObservableValue<? extends String> Observable, String oldVal, String newVal) throws Exception {
-        ObservableList<String> selectedItems = lst.getSelectionModel().getSelectedItems();
-        Course curso = CoursePetitions.getInstance().findByName(String.valueOf(selectedItems));
+    public void listViewSelectedCourse() throws Exception {
+        String nameOfcourse = String.valueOf(lst.getSelectionModel().getSelectedItems());
+        Course curso = CoursePetitions.getInstance().findByName(nameOfcourse);
         etiqueta.setText(curso.getDefinition());
-        //String getSelectedItems = (selectedItems.isEmpty())?"Nada seleccionado":selectedItems.toString();
-        //etiqueta.setText(getSelectedItems);
+
+
     }
 
     private void poblarTabla() throws Exception{

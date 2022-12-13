@@ -80,5 +80,19 @@ public class CoursePetitions {
         return null;
     }
 
+    public Course findByName(String name) throws Exception {
 
+        Gson gsonMod = new Gson();
+        HttpRequest a= HttpRequest.newBuilder()
+                .uri(new URI(linkStatic+"/allByName?name="+name))
+                .GET()
+                .build();
+        HttpClient httpClient = HttpClient.newHttpClient();
+        HttpResponse<String> response = httpClient.send(a, HttpResponse.BodyHandlers.ofString());
+
+        Type listType = new TypeToken<List<Course>>() {}.getType();
+        Course curso = gsonMod.fromJson(response.body(), Course.class);
+
+        return curso;
+    }
 }

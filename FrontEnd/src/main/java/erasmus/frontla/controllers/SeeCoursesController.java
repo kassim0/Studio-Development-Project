@@ -4,27 +4,33 @@ import erasmus.frontla.endpoints.CoursePetitions;
 import erasmus.frontla.objects.Course;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
 public class SeeCoursesController {
 
     @FXML
     private Button btnSeeCourses;
+
+    @FXML
+    private Label etiqueta;
 
     @FXML
     private ListView<String> lst;
@@ -44,7 +50,10 @@ public class SeeCoursesController {
     @FXML
     private Button nuevaVista;
 
-
+    String query = null;
+    Connection connection = null;
+    PreparedStatement preparedStatement = null;
+    ResultSet resultSet = null;
     HelloController helloController = new HelloController();
 
     private final StringProperty project = new SimpleStringProperty();
@@ -64,13 +73,14 @@ public class SeeCoursesController {
 
     @FXML
     void nuevaVista(ActionEvent event) {
-        
+
     }
     @FXML
     void seeCourses(ActionEvent event) throws Exception {
         helloController.texto();
-       // metodoAux();
+       //metodoAux();
         poblar();
+        //refresh();
     }
     private void poblar() throws Exception {
         CoursePetitions coursePetitions = new CoursePetitions();
@@ -84,6 +94,30 @@ public class SeeCoursesController {
 
             lst.getItems().add(nombreAux);
         }
+        //lst.getSelectionModel().selectedItemProperty().addListener(this::selectionChanged);
+        lst.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                String cursoSeleccionado = lst.getSelectionModel().getSelectedItem();
+                try {
+                    Course curso =  CoursePetitions.getInstance().findByName(cursoSeleccionado);
+                    etiqueta.setText(curso.getDefinition());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                //System.out.println(curso.getCredits() + " " + curso.getDefinition());
+
+            }
+        });
+
+    }
+
+    private void selectionChanged(ObservableValue<? extends String> Observable, String oldVal, String newVal) throws Exception {
+        ObservableList<String> selectedItems = lst.getSelectionModel().getSelectedItems();
+        Course curso = CoursePetitions.getInstance().findByName(String.valueOf(selectedItems));
+        etiqueta.setText(curso.getDefinition());
+        //String getSelectedItems = (selectedItems.isEmpty())?"Nada seleccionado":selectedItems.toString();
+        //etiqueta.setText(getSelectedItems);
     }
 
     private void poblarTabla() throws Exception{
@@ -93,17 +127,14 @@ public class SeeCoursesController {
         List<Course> listadecursos = null;
         listadecursos = coursePetitions.getAllCurso();
 
-
-
     }
     private void metodoAux() throws Exception {
         CoursePetitions coursePetitions2 = new CoursePetitions();
-        List<Course> listadecursos2 = coursePetitions2.getAllCurso();
+        List<Course> listaCursos3 = coursePetitions2.getAllCurso();
 
         ObservableList<Course> listaaaa = FXCollections.observableArrayList();
-
-
-        for (Course curse2 : listadecursos2) {
+        
+        for (Course curse2 : listaCursos3) {
 
             String nombre = curse2.getName();
             Integer creditos = curse2.getCredits();
@@ -114,11 +145,21 @@ public class SeeCoursesController {
             listaaaa.add(v);
         }
 
-        tbleName.setCellValueFactory(new PropertyValueFactory<>("name"));
-        tbleCTS.setCellValueFactory(new PropertyValueFactory<>("credits"));
-        tbleDef.setCellValueFactory(new PropertyValueFactory<>("definition"));
+        this.tbleName.setCellValueFactory(new PropertyValueFactory("name"));
+        this.tbleCTS.setCellValueFactory(new PropertyValueFactory("credits"));
+        this.tbleDef.setCellValueFactory(new PropertyValueFactory("definition"));
 
         table.setItems(listaaaa);
+    }
+    private void refresh() throws SQLException {
+        query = "SELECT name FROM 'Course'";
+        preparedStatement = connection.prepareStatement(query);
+        resultSet = preparedStatement.executeQuery();
+
+        while(resultSet.next()){
+                lst.getItems().add(resultSet.toString());
+        }
+
     }
 
 }

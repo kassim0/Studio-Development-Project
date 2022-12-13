@@ -21,9 +21,14 @@ public class HelloController {
         v.setDefinition("sdafda");
         v.setName("reer");
         a.createCourse(v);
-        System.out.println(1);
-        a.getCourse(1);
-        System.out.println(2);
+
+
+        Course v2=new Course("hola", "sdafda",3);
+        v.setCredits(3);
+        v.setDefinition("mas descripcion");
+        v.setName("cursoDos");
+        a.createCourse(v);
+
 
         System.out.println(CoursePetitions.getInstance().getCourse(1).getName());
         return CoursePetitions.getInstance().getCourse(1).getName();

@@ -10,7 +10,7 @@ public class Course {
 
      String definition;
 
-     Integer credits;
+         Integer credits;
 
     public Course(String name, String definition, Integer credits) {
         this.name = name;

@@ -2,7 +2,6 @@ package accesingdatamysql.controller;
 import accesingdatamysql.entity.Course;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import accesingdatamysql.repository.*;
 
@@ -62,8 +61,15 @@ public class CourseController {
          if(CourseRepository.existsById(idToSearch)){
              CourseToChange =CourseRepository.findById(idToSearch).get();
          };
-
-
          return null;
     }
+    @GetMapping(path="/allByName")
+    public @ResponseBody Course getCourseByName(@RequestParam String name) {
+        // This returns a JSON or XML with the users
+        //Course prueba2 = CourseRepository.findByName(name);
+
+        return CourseRepository.findByName(name);
+    }
+
+
 }

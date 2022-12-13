@@ -43,6 +43,7 @@ public class CourseCreationMenuController {
 
         a.createCourse(course);
         System.out.println(CoursePetitions.getInstance().getCourse(1).getName());
+        System.out.println(CoursePetitions.getInstance().findByName("ad").getName());
 
     }
 

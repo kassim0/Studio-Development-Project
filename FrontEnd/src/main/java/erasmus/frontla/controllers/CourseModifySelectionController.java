@@ -26,14 +26,14 @@ public class CourseModifySelectionController {
 
 
     @FXML
-    private ListView<Course> listCourse;
+    private ListView<String> listCourse;
 
     @FXML
     private Button backButton;
 
     @FXML
     private Button modifyButton;
-    public ObservableList<Course> observableList;
+    public ObservableList<String> observableList;
 
 
     public void cargarDatos() throws Exception {
@@ -41,10 +41,17 @@ public class CourseModifySelectionController {
         List<Course> bateria;
 
         bateria= CoursePetitions.getInstance().getAllCurso();
+        System.out.println(bateria.size());
 
-//        observableList = FXCollections.observableArrayList(bateria);
-//
-//        listCourse.setItems(observableList);
+        List<String> nombres = null;
+
+        for(int i=0;i<=bateria.size();i++){
+            nombres.add(bateria.get(i).getName());
+        }
+
+        observableList = FXCollections.observableArrayList(nombres);
+
+        listCourse.setItems(observableList);
 
         System.out.println(bateria);
     }

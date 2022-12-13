@@ -67,8 +67,12 @@ public class CourseController {
     public @ResponseBody Course getCourseByName(@RequestParam String name) {
         // This returns a JSON or XML with the users
         //Course prueba2 = CourseRepository.findByName(name);
-
-        return CourseRepository.findByName(name);
+        Integer idToSearch= Integer.valueOf(CourseRepository.findByName(name));
+        Course CourseToChange = null;
+        if(CourseRepository.existsById(idToSearch)){
+            CourseToChange =CourseRepository.findById(idToSearch).get();
+        };
+        return CourseToChange;
     }
 
 

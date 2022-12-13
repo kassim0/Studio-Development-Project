@@ -12,6 +12,6 @@ import java.util.Optional;
 // CRUD refers Create, Read, Update, Delete
 
 public interface CourseRepository extends CrudRepository<Course, Integer> {
-    @Query("SELECT name FROM Course c WHERE c.name=:name2")
-    Course findByName(@Param("name2") String name2);
+    @Query("SELECT id FROM Course c WHERE c.name=:name2")
+    Integer findByName(@Param("name2") String name2);
 }

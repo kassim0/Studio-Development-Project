@@ -11,7 +11,7 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        AnchorPane pane = Loader.LoaderView("seeCourses.fxml");
+        AnchorPane pane = Loader.LoaderView("CoursesCreation.fxml");
         Scene scene = new Scene(pane);
         stage.setTitle("Hello!");
         stage.setScene(scene);

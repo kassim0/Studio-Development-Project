@@ -90,9 +90,7 @@ public class CoursePetitions {
         HttpClient httpClient = HttpClient.newHttpClient();
         HttpResponse<String> response = httpClient.send(a, HttpResponse.BodyHandlers.ofString());
 
-        Course curso = gsonMod.fromJson(response.body(), Course.class);
-
-        return curso;
+        return gsonMod.fromJson(response.body(), Course.class);
     }
 
 }

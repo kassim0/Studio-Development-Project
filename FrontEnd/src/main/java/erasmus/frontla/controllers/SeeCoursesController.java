@@ -72,16 +72,34 @@ public class SeeCoursesController {
 
 
     @FXML
-    void nuevaVista(ActionEvent event) {
+    void nuevaVista(ActionEvent event) throws Exception {
+        List lista = lst.getSelectionModel().getSelectedItems();
+        String nombre = (String) lista.get(0);
+        System.out.println(nombre);
+        System.out.println(lst.getSelectionModel().getSelectedItems());
+        System.out.println(lst.getSelectionModel().getSelectedItems().getClass().getSimpleName());
+
+        List courseSelected = lst.getSelectionModel().getSelectedItems();
+        String courseSelectedInString = (String) courseSelected.get(0);
+        Course curso = CoursePetitions.getInstance().findByName(courseSelectedInString);
+        etiqueta.setText(curso.getDefinition());
+        //System.out.println(curso);
+
+        //etiqueta.setText(CoursePetitions.getInstance().findByName("cursoDos").getDefinition());
+
+        //etiqueta.setText(curso.getDefinition());
+        //Course cursoAux = CoursePetitions.getInstance().getCourse(1);
+        //etiqueta.setText(cursoAux.getName());
 
     }
     @FXML
     void seeCourses(ActionEvent event) throws Exception {
         helloController.texto();
-       //metodoAux();
         poblar();
-        //refresh();
     }
+
+
+
     private void poblar() throws Exception {
         CoursePetitions coursePetitions = new CoursePetitions();
 
@@ -90,75 +108,22 @@ public class SeeCoursesController {
         listadecursos = coursePetitions.getAllCurso();
 
         for (Course curse : listadecursos) {
-            String nombreAux =curse.getId() + "/" + curse.getName();
+            String nombreAux =curse.getName();
 
             lst.getItems().add(nombreAux);
         }
-        /*
-        lst.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
-                String cursoSeleccionado = lst.getSelectionModel().getSelectedItem();
-                try {
-                    Course curso =  CoursePetitions.getInstance().findByName(cursoSeleccionado);
-                    etiqueta.setText(curso.getDefinition());
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                //System.out.println(curso.getCredits() + " " + curso.getDefinition());
-
-            }
-        });*/
-
+        System.out.println("**** " + CoursePetitions.getInstance().findByName("cursoDos").getDefinition() +" ***");
     }
+
+
     public void listViewSelectedCourse() throws Exception {
+        /*
         String nameOfcourse = String.valueOf(lst.getSelectionModel().getSelectedItems());
-        Course curso = CoursePetitions.getInstance().findByName(nameOfcourse);
-        etiqueta.setText(curso.getDefinition());
+        //Course curso = CoursePetitions.getInstance().findByName(nameOfcourse);
+        //etiqueta.setText(curso.getDefinition());
+        Course cursoAux = CoursePetitions.getInstance().getCourse(1);
+        etiqueta.setText(cursoAux.getName());
 
-
+        */
     }
-
-    private void poblarTabla() throws Exception{
-        CoursePetitions coursePetitions = new CoursePetitions();
-
-
-        List<Course> listadecursos = null;
-        listadecursos = coursePetitions.getAllCurso();
-
-    }
-    private void metodoAux() throws Exception {
-        CoursePetitions coursePetitions2 = new CoursePetitions();
-        List<Course> listaCursos3 = coursePetitions2.getAllCurso();
-
-        ObservableList<Course> listaaaa = FXCollections.observableArrayList();
-        
-        for (Course curse2 : listaCursos3) {
-
-            String nombre = curse2.getName();
-            Integer creditos = curse2.getCredits();
-            String definicion = curse2.getDefinition();
-
-            CoursePetitions a = CoursePetitions.getInstance();
-            Course v=new Course("hola", "sdafda",3);
-            listaaaa.add(v);
-        }
-
-        this.tbleName.setCellValueFactory(new PropertyValueFactory("name"));
-        this.tbleCTS.setCellValueFactory(new PropertyValueFactory("credits"));
-        this.tbleDef.setCellValueFactory(new PropertyValueFactory("definition"));
-
-        table.setItems(listaaaa);
-    }
-    private void refresh() throws SQLException {
-        query = "SELECT name FROM 'Course'";
-        preparedStatement = connection.prepareStatement(query);
-        resultSet = preparedStatement.executeQuery();
-
-        while(resultSet.next()){
-                lst.getItems().add(resultSet.toString());
-        }
-
-    }
-
 }

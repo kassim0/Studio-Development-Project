@@ -18,13 +18,17 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.List;
+import java.sql.*;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class SeeCoursesController {
+
+    @FXML
+    private Button btnSearch;
+
+    @FXML
+    private TextField searchBar;
 
     @FXML
     private Button btnSeeCourses;
@@ -34,18 +38,6 @@ public class SeeCoursesController {
 
     @FXML
     private ListView<String> lst;
-
-    @FXML
-    private TableView<Course> table;
-
-    @FXML
-    private TableColumn<Course, Integer> tbleCTS;
-
-    @FXML
-    private TableColumn<Course, String> tbleDef;
-
-    @FXML
-    private TableColumn<Course, String> tbleName;
 
     @FXML
     private Button nuevaVista;
@@ -73,37 +65,17 @@ public class SeeCoursesController {
 
     @FXML
     void nuevaVista(ActionEvent event) throws Exception {
-        List lista = lst.getSelectionModel().getSelectedItems();
-        String nombre = (String) lista.get(0);
-        System.out.println(nombre);
-        System.out.println(lst.getSelectionModel().getSelectedItems());
-        System.out.println(lst.getSelectionModel().getSelectedItems().getClass().getSimpleName());
-
-        List courseSelected = lst.getSelectionModel().getSelectedItems();
-        String courseSelectedInString = (String) courseSelected.get(0);
-        Course curso = CoursePetitions.getInstance().findByName(courseSelectedInString);
-        etiqueta.setText(curso.getDefinition());
-        //System.out.println(curso);
-
-        //etiqueta.setText(CoursePetitions.getInstance().findByName("cursoDos").getDefinition());
-
-        //etiqueta.setText(curso.getDefinition());
-        //Course cursoAux = CoursePetitions.getInstance().getCourse(1);
-        //etiqueta.setText(cursoAux.getName());
 
     }
+
     @FXML
     void seeCourses(ActionEvent event) throws Exception {
         helloController.texto();
         poblar();
     }
 
-
-
     private void poblar() throws Exception {
         CoursePetitions coursePetitions = new CoursePetitions();
-
-
         List<Course> listadecursos = null;
         listadecursos = coursePetitions.getAllCurso();
 
@@ -117,13 +89,37 @@ public class SeeCoursesController {
 
 
     public void listViewSelectedCourse() throws Exception {
-        /*
-        String nameOfcourse = String.valueOf(lst.getSelectionModel().getSelectedItems());
-        //Course curso = CoursePetitions.getInstance().findByName(nameOfcourse);
-        //etiqueta.setText(curso.getDefinition());
-        Course cursoAux = CoursePetitions.getInstance().getCourse(1);
-        etiqueta.setText(cursoAux.getName());
+        List courseSelected = lst.getSelectionModel().getSelectedItems();
+        String courseSelectedInString = (String) courseSelected.get(0);
+        Course curso = CoursePetitions.getInstance().findByName(courseSelectedInString);
+        etiqueta.setText(curso.getDefinition());
+    }
 
-        */
+    @FXML
+    void searchCourse(ActionEvent event) throws Exception {
+        CoursePetitions coursePetitions = new CoursePetitions();
+        List<Course> listadecursos = null;
+        listadecursos = coursePetitions.getAllCurso();
+        
+        ArrayList<String> nombreDeLosCursos = new ArrayList<>();
+
+        for (Course curse : listadecursos) {
+            String nombreAux =curse.getName();
+
+            nombreDeLosCursos.add(nombreAux);
+        }
+
+        lst.getItems().clear();
+        lst.getItems().addAll(searchList(searchBar.getText(), nombreDeLosCursos));
+
+    }
+
+    private List<String> searchList(String searchWord, List<String> listOfStrings){
+        List<String> searchWordsArray = Arrays.asList(searchWord.trim().split(" "));
+
+        return listOfStrings.stream().filter(input -> {
+            return searchWordsArray.stream().allMatch(word ->
+                    input.toLowerCase().contains(word.toLowerCase()));
+        }).collect(Collectors.toList());
     }
 }

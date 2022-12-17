@@ -1,5 +1,6 @@
 package erasmus.frontla.controllers;
 
+import erasmus.frontla.Loader;
 import erasmus.frontla.endpoints.CoursePetitions;
 import erasmus.frontla.objects.Course;
 import javafx.beans.property.SimpleStringProperty;
@@ -11,13 +12,16 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 import java.sql.*;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -42,10 +46,6 @@ public class SeeCoursesController {
     @FXML
     private Button nuevaVista;
 
-    String query = null;
-    Connection connection = null;
-    PreparedStatement preparedStatement = null;
-    ResultSet resultSet = null;
     HelloController helloController = new HelloController();
 
     private final StringProperty project = new SimpleStringProperty();
@@ -65,6 +65,24 @@ public class SeeCoursesController {
 
     @FXML
     void nuevaVista(ActionEvent event) throws Exception {
+        List courseSelected = lst.getSelectionModel().getSelectedItems();
+        String courseSelectedInString = (String) courseSelected.get(0);
+        Course curso = CoursePetitions.getInstance().findByName(courseSelectedInString);
+
+        Stage stage = new Stage();
+        URL paneUrl = Loader.LoaderViewCont("courseView.fxml");
+
+        FXMLLoader paneL = new FXMLLoader(paneUrl);
+        AnchorPane pane = paneL.load();
+
+        CourseViewController controller = paneL.getController();
+        controller.init(curso.getName(), curso.getCredits(), curso.getDefinition());
+        Scene scene = new Scene(pane);
+        stage.setTitle("View course");
+        stage.setScene(scene);
+        stage.show();
+        Node n = (Node)event.getSource();
+        n.getScene().getWindow().hide();
 
     }
 
@@ -100,7 +118,7 @@ public class SeeCoursesController {
         CoursePetitions coursePetitions = new CoursePetitions();
         List<Course> listadecursos = null;
         listadecursos = coursePetitions.getAllCurso();
-        
+
         ArrayList<String> nombreDeLosCursos = new ArrayList<>();
 
         for (Course curse : listadecursos) {

@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eaeb9f3e-19b0-4647-b185-09086609e07e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/controllers/CourseViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FrontEnd/src/main/resources/erasmus/frontla/courseView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/controllers/SeeCoursesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/controllers/SeeCoursesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/main/resources/erasmus/frontla/seeCourses.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/main/resources/erasmus/frontla/seeCourses.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/controllers/SeeCoursesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/controllers/SeeCoursesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/seeCourses.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/seeCourses.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,5 +51,16 @@
       <updated>1671037436578</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

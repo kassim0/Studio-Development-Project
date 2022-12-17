@@ -1,0 +1,48 @@
+.studyButton{
+    -fx-background-color:none;
+    -fx-text-fill:#a9a9a9;
+}
+
+.studyButton:hover{
+    -fx-text-fill:white;
+}
+
+.laButton{
+    -fx-background-color:none;
+    -fx-text-fill:#a9a9a9;
+}
+
+.laButton:hover{
+    -fx-text-fill:white;
+}
+
+.loginButton{
+    -fx-background-color: #f35f55;
+    -fx-text-fill:white;
+    -fx-font-size:14;
+    -fx-font-family:'SansSerif';
+}
+
+.loginButton:hover{
+    -fx-background-color: white;
+    -fx-text-fill: #f35f55;
+    -fx-border-color:#f35f55;
+}
+
+.signupButton{
+    -fx-background-color:#0C9CEE;
+    -fx-text-fill:white;
+    -fx-font-size:14;
+    -fx-font-family:'SansSerif';
+}
+
+.signupButton:hover{
+    -fx-background-color: white;
+    -fx-text-fill:#0C9CEE;
+    -fx-border-color:#0C9CEE;
+}
+
+.menu{
+    -fx-spacing:3;
+    -fx-alignment:center;
+}

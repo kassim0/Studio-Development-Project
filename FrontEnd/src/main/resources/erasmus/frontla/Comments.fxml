@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="729.0" prefWidth="1372.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="erasmus.frontla.controllers.StudyProgrammesController">
+   <children>
+      <Pane layoutX="6.0" prefHeight="144.0" prefWidth="1066.0" style="-fx-background-color: rgba(42, 54, 59, 0.9);" styleClass="pane" stylesheets="@studyStyle.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane layoutX="423.0" layoutY="99.0" />
+            <HBox layoutY="92.0" prefHeight="26.0" prefWidth="1372.0" styleClass="menu" stylesheets="@studyStyle.css">
+               <children>
+                  <Button fx:id="homeButton" mnemonicParsing="false" onAction="#homeView" style="-fx-background-color: none;" styleClass="homeButton" stylesheets="@studyStyle.css" text="HOME" textFill="WHITE" />
+                  <Button fx:id="studyButton" mnemonicParsing="false" onAction="#studyView" prefHeight="23.0" prefWidth="150.0" styleClass="studyButton" stylesheets="@studyStyle.css" text="STUDY PROGRAMMES" />
+                  <Button fx:id="laButton" mnemonicParsing="false" onAction="#laView" prefHeight="23.0" prefWidth="161.0" styleClass="laButton" stylesheets="@studyStyle.css" text="LEARNING AGREEMENT" />
+               </children>
+            </HBox>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-2.0" layoutY="26.0" prefHeight="36.0" prefWidth="1389.0" styleClass="nameApp" stylesheets="@studyStyle.css" text="NAME OF THE APP" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="25.0" />
+               </font>
+            </Label>
+            <Text fill="#f35f55" layoutX="805.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="." wrappingWidth="10.40625">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="48.0" />
+               </font>
+            </Text>
+            <Text fill="#f35f55" layoutX="571.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="." textAlignment="CENTER" wrappingWidth="121.85156249999994">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="48.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutY="139.0" prefHeight="590.0" prefWidth="1376.0" style="-fx-background-color: #f2f3f4;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="139.0">
+         <children>
+            <ScrollPane layoutY="1.0" prefHeight="593.0" prefWidth="1371.0" style="-fx-background-color: #F2F3F4;">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1048.0" prefWidth="1376.0">
+                     <children>
+                        <Pane layoutX="100.0" layoutY="14.0" prefHeight="200.0" prefWidth="1316.0" style="-fx-background-color: #F2F3F4;" stylesheets="@laStyle.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutY="29.0" prefHeight="25.0" prefWidth="1372.0" styleClass="choose-faculty" stylesheets="@studyStyle.css" text="STUDENTS COMMENTS" />
+                              <Label fx:id="studyp" layoutX="2.0" layoutY="54.0" prefHeight="46.0" prefWidth="1368.0" styleClass="studyProg" stylesheets="@studyStyle.css" text="Name of the course" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="-1.0" layoutY="135.0" prefHeight="382.0" prefWidth="1376.0" style="-fx-background-color: #F2F3F4;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Label layoutX="523.0" layoutY="148.0" style="-fx-font-size: 50;" text="add comments" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="-10.0" layoutY="542.0" prefHeight="701.0" prefWidth="1376.0" style="-fx-background-color: ffffff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Pane layoutX="269.0" layoutY="38.0">
+                                 <children>
+                                    <Pane prefHeight="49.0" prefWidth="839.0" style="-fx-background-color: rgba(42, 54, 59, 0.9);" styleClass="form" stylesheets="@laStyle.css">
+                                       <children>
+                                          <Label layoutX="21.0" layoutY="6.0" styleClass="student" stylesheets="@laStyle.css" text="Add Comment" />
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutY="46.0" prefHeight="580.0" prefWidth="839.0" style="-fx-background-color: #f2f3f4;" styleClass="form" stylesheets="@laStyle.css">
+                                       <children>
+                                          <Label layoutX="97.0" layoutY="42.0" style="-fx-font-weight: normal; -fx-font-size: 15;" styleClass="forms-topics" stylesheets="@laStyle.css" text="First Name(s)" />
+                                          <Label layoutX="475.0" layoutY="42.0" style="-fx-font-weight: normal; -fx-font-size: 15;" styleClass="forms-topics" stylesheets="@laStyle.css" text="Last Name(s)" />
+                                          <TextField layoutX="97.0" layoutY="72.0" prefHeight="36.0" prefWidth="306.0" />
+                                          <Label layoutX="97.0" layoutY="164.0" style="-fx-font-weight: normal; -fx-font-size: 15;" styleClass="forms-topics" stylesheets="@laStyle.css" text="Email" />
+                                          <TextField layoutX="97.0" layoutY="193.0" prefHeight="36.0" prefWidth="665.0" />
+                                          <TextField layoutX="475.0" layoutY="72.0" prefHeight="36.0" prefWidth="306.0" />
+                                          <TextArea layoutX="97.0" layoutY="302.0" prefHeight="200.0" prefWidth="665.0" />
+                                          <Label layoutX="97.0" layoutY="276.0" style="-fx-font-weight: normal; -fx-font-size: 15;" styleClass="forms-topics" stylesheets="@laStyle.css" text="Comment" />
+                                          <Button layoutX="98.0" layoutY="532.0" mnemonicParsing="false" styleClass="commentButton" stylesheets="@laStyle.css" text="Submit Comment" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children></Pane>
+   </children>
+</AnchorPane>

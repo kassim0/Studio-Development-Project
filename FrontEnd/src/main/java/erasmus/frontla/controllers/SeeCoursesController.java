@@ -1,5 +1,6 @@
 package erasmus.frontla.controllers;
 
+import erasmus.frontla.Loader;
 import erasmus.frontla.endpoints.CoursePetitions;
 import erasmus.frontla.objects.Course;
 import javafx.beans.property.SimpleStringProperty;
@@ -11,20 +12,27 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.List;
+import java.net.URL;
+import java.sql.*;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class SeeCoursesController {
+
+    @FXML
+    private Button btnSearch;
+
+    @FXML
+    private TextField searchBar;
 
     @FXML
     private Button btnSeeCourses;
@@ -36,24 +44,8 @@ public class SeeCoursesController {
     private ListView<String> lst;
 
     @FXML
-    private TableView<Course> table;
-
-    @FXML
-    private TableColumn<Course, Integer> tbleCTS;
-
-    @FXML
-    private TableColumn<Course, String> tbleDef;
-
-    @FXML
-    private TableColumn<Course, String> tbleName;
-
-    @FXML
     private Button nuevaVista;
 
-    String query = null;
-    Connection connection = null;
-    PreparedStatement preparedStatement = null;
-    ResultSet resultSet = null;
     HelloController helloController = new HelloController();
 
     private final StringProperty project = new SimpleStringProperty();
@@ -72,94 +64,80 @@ public class SeeCoursesController {
 
 
     @FXML
-    void nuevaVista(ActionEvent event) {
+    void nuevaVista(ActionEvent event) throws Exception {
+        List courseSelected = lst.getSelectionModel().getSelectedItems();
+        String courseSelectedInString = (String) courseSelected.get(0);
+        Course curso = CoursePetitions.getInstance().findByName(courseSelectedInString);
+
+        Stage stage = new Stage();
+        URL paneUrl = Loader.LoaderViewCont("courseView.fxml");
+
+        FXMLLoader paneL = new FXMLLoader(paneUrl);
+        AnchorPane pane = paneL.load();
+
+        CourseViewController controller = paneL.getController();
+        controller.init(curso.getName(), curso.getCredits(), curso.getDefinition());
+        Scene scene = new Scene(pane);
+        stage.setTitle("View course");
+        stage.setScene(scene);
+        stage.show();
+        Node n = (Node)event.getSource();
+        n.getScene().getWindow().hide();
 
     }
+
     @FXML
     void seeCourses(ActionEvent event) throws Exception {
         helloController.texto();
-       //metodoAux();
         poblar();
-        //refresh();
     }
+
     private void poblar() throws Exception {
         CoursePetitions coursePetitions = new CoursePetitions();
-
-
         List<Course> listadecursos = null;
         listadecursos = coursePetitions.getAllCurso();
 
         for (Course curse : listadecursos) {
-            String nombreAux =curse.getId() + "/" + curse.getName();
+            String nombreAux =curse.getName();
 
             lst.getItems().add(nombreAux);
         }
-        //lst.getSelectionModel().selectedItemProperty().addListener(this::selectionChanged);
-        lst.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
-                String cursoSeleccionado = lst.getSelectionModel().getSelectedItem();
-                try {
-                    Course curso =  CoursePetitions.getInstance().findByName(cursoSeleccionado);
-                    etiqueta.setText(curso.getDefinition());
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                //System.out.println(curso.getCredits() + " " + curso.getDefinition());
-
-            }
-        });
-
+        System.out.println("**** " + CoursePetitions.getInstance().findByName("cursoDos").getDefinition() +" ***");
     }
 
-    private void selectionChanged(ObservableValue<? extends String> Observable, String oldVal, String newVal) throws Exception {
-        ObservableList<String> selectedItems = lst.getSelectionModel().getSelectedItems();
-        Course curso = CoursePetitions.getInstance().findByName(String.valueOf(selectedItems));
+
+    public void listViewSelectedCourse() throws Exception {
+        List courseSelected = lst.getSelectionModel().getSelectedItems();
+        String courseSelectedInString = (String) courseSelected.get(0);
+        Course curso = CoursePetitions.getInstance().findByName(courseSelectedInString);
         etiqueta.setText(curso.getDefinition());
-        //String getSelectedItems = (selectedItems.isEmpty())?"Nada seleccionado":selectedItems.toString();
-        //etiqueta.setText(getSelectedItems);
     }
 
-    private void poblarTabla() throws Exception{
+    @FXML
+    void searchCourse(ActionEvent event) throws Exception {
         CoursePetitions coursePetitions = new CoursePetitions();
-
-
         List<Course> listadecursos = null;
         listadecursos = coursePetitions.getAllCurso();
 
-    }
-    private void metodoAux() throws Exception {
-        CoursePetitions coursePetitions2 = new CoursePetitions();
-        List<Course> listaCursos3 = coursePetitions2.getAllCurso();
+        ArrayList<String> nombreDeLosCursos = new ArrayList<>();
 
-        ObservableList<Course> listaaaa = FXCollections.observableArrayList();
-        
-        for (Course curse2 : listaCursos3) {
+        for (Course curse : listadecursos) {
+            String nombreAux =curse.getName();
 
-            String nombre = curse2.getName();
-            Integer creditos = curse2.getCredits();
-            String definicion = curse2.getDefinition();
-
-            CoursePetitions a = CoursePetitions.getInstance();
-            Course v=new Course("hola", "sdafda",3);
-            listaaaa.add(v);
+            nombreDeLosCursos.add(nombreAux);
         }
 
-        this.tbleName.setCellValueFactory(new PropertyValueFactory("name"));
-        this.tbleCTS.setCellValueFactory(new PropertyValueFactory("credits"));
-        this.tbleDef.setCellValueFactory(new PropertyValueFactory("definition"));
-
-        table.setItems(listaaaa);
-    }
-    private void refresh() throws SQLException {
-        query = "SELECT name FROM 'Course'";
-        preparedStatement = connection.prepareStatement(query);
-        resultSet = preparedStatement.executeQuery();
-
-        while(resultSet.next()){
-                lst.getItems().add(resultSet.toString());
-        }
+        lst.getItems().clear();
+        lst.getItems().addAll(searchList(searchBar.getText(), nombreDeLosCursos));
 
     }
 
+    private List<String> searchList(String searchWord, List<String> listOfStrings){
+        List<String> searchWordsArray = Arrays.asList(searchWord.trim().split(" "));
+
+        return listOfStrings.stream().filter(input -> {
+            return searchWordsArray.stream().allMatch(word ->
+                    input.toLowerCase().contains(word.toLowerCase()));
+        }).collect(Collectors.toList());
+    }
 }

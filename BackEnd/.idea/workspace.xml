@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb44146-4c4a-4c8e-b69e-3547dcb562a1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/objects/Conexion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/controllers/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/controllers/HelloController.java" afterDir="false" />
+    <list default="true" id="eaeb9f3e-19b0-4647-b185-09086609e07e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/controllers/CourseViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FrontEnd/src/main/resources/erasmus/frontla/courseView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/controllers/SeeCoursesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/controllers/SeeCoursesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/objects/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/objects/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/main/resources/erasmus/frontla/CourseDescription.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/main/resources/erasmus/frontla/CourseDescription.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/main/resources/erasmus/frontla/seeCourses.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/main/resources/erasmus/frontla/seeCourses.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/CourseDescription.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/CourseDescription.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/controllers/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/controllers/HelloController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/controllers/SeeCoursesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/controllers/SeeCoursesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/seeCourses.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/seeCourses.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../prueba/BackEnd/learningboot/src/main/java/accesingdatamysql/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../prueba/BackEnd/learningboot/src/main/java/accesingdatamysql/controller/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../prueba/BackEnd/learningboot/src/main/java/accesingdatamysql/repository/CourseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../prueba/BackEnd/learningboot/src/main/java/accesingdatamysql/repository/CourseRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +19,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="2IYNYqnkaMvTTiVZadPtFpKwBf7" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2IuhZo8Oag1SLl5zeErP9mtQqTN" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -35,17 +30,37 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../prueba" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="1" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="accesingdatamysql.LearningbootApplication" />
+      <module name="learningboot" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cdb44146-4c4a-4c8e-b69e-3547dcb562a1" name="Changes" comment="" />
-      <created>1670354613901</created>
+      <changelist id="eaeb9f3e-19b0-4647-b185-09086609e07e" name="Changes" comment="" />
+      <created>1671037436578</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1670354613901</updated>
+      <updated>1671037436578</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

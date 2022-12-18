@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="729.0" prefWidth="1372.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="erasmus.frontla.controllers.LearningAgreementController">
+   <children>
+      <Pane layoutX="6.0" prefHeight="144.0" prefWidth="1066.0" style="-fx-background-color: rgba(42, 54, 59, 0.9);" styleClass="pane" stylesheets="@studyStyle.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane layoutX="423.0" layoutY="99.0" />
+            <HBox layoutY="92.0" prefHeight="26.0" prefWidth="1372.0" styleClass="menu" stylesheets="@studyStyle.css">
+               <children>
+                  <Button fx:id="homeButton" mnemonicParsing="false" onAction="#homeView" style="-fx-background-color: none;" styleClass="homeButton" stylesheets="@laStyle.css" text="HOME" textFill="WHITE" />
+                  <Button fx:id="studyButton" mnemonicParsing="false" onAction="#studyView" prefHeight="23.0" prefWidth="150.0" styleClass="studyButton" stylesheets="@laStyle.css" text="STUDY PROGRAMMES" />
+                  <Button fx:id="laButton" mnemonicParsing="false" onAction="#laView" prefHeight="23.0" prefWidth="161.0" styleClass="laButton" stylesheets="@laStyle.css" text="LEARNING AGREEMENT" />
+               </children>
+            </HBox>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-2.0" layoutY="26.0" prefHeight="36.0" prefWidth="1374.0" styleClass="nameApp" stylesheets="@studyStyle.css" text="NAME OF THE APP" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="25.0" />
+               </font>
+            </Label>
+            <Text fill="#f35f55" layoutX="709.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="." textAlignment="CENTER" wrappingWidth="141.05151367187494">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="48.0" />
+               </font>
+            </Text>
+            <Text fill="#f35f55" layoutX="794.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="." wrappingWidth="10.40625">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="48.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutY="139.0" prefHeight="590.0" prefWidth="1373.0" style="-fx-background-color: #f2f3f4;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="139.0">
+         <children>
+            <Label layoutX="-3.0" layoutY="112.0" prefHeight="25.0" prefWidth="1372.0" styleClass="laPhrase" stylesheets="@laStyle.css" text="See the status of your Online Learning Agreement to successfully finalise it with the sending and receiving university" />
+            <Label fx:id="studyp" layoutX="-2.0" layoutY="37.0" prefHeight="46.0" prefWidth="1368.0" styleClass="learningA" stylesheets="@laStyle.css" text="Learning Agreement" />
+            <Pane layoutX="623.0" layoutY="137.0" styleClass="circle" stylesheets="@studyStyle.css" />
+            <TableView fx:id="laTable" layoutX="157.0" layoutY="224.0" prefHeight="200.0" prefWidth="1051.0" styleClass="table" stylesheets="@laStyle.css">
+              <columns>
+                <TableColumn fx:id="send" prefWidth="210.0" style="-fx-font-size: 20; -fx-font-weight: normal; -fx-background-color: rgba(42, 54, 59, 0.9); -fx-text-background-color: #ffffff;" text="Sending Institution" />
+                <TableColumn fx:id="receive" prefWidth="210.0" style="-fx-font-size: 20; -fx-font-weight: normal; -fx-background-color: rgba(42, 54, 59, 0.9); -fx-text-background-color: #ffffff;" text="Receiving Institution" />
+                  <TableColumn fx:id="status" prefWidth="210.0" style="-fx-font-size: 20; -fx-font-weight: normal; -fx-background-color: rgba(42, 54, 59, 0.9); -fx-text-background-color: #ffffff;" text="Status" />
+                  <TableColumn fx:id="create" prefWidth="210.0" style="-fx-font-size: 20; -fx-font-weight: normal; -fx-background-color: rgba(42, 54, 59, 0.9); -fx-text-background-color: #ffffff;" text="Created" />
+                  <TableColumn fx:id="viewEdit" maxWidth="210.0" prefWidth="210.0" style="-fx-font-size: 20; -fx-font-weight: normal; -fx-background-color: rgba(42, 54, 59, 0.9); -fx-text-background-color: #ffffff;" text="View or Edit" />
+              </columns>
+               <effect>
+                  <DropShadow color="lightgray" offsetX="5.0" offsetY="5.0" />
+               </effect>
+            </TableView>
+            <Button layoutX="158.0" layoutY="183.0" mnemonicParsing="false" onAction="#createView" prefHeight="31.0" prefWidth="121.0" styleClass="createButton" stylesheets="@laStyle.css" text="Create New" />
+         </children></Pane>
+   </children>
+</AnchorPane>

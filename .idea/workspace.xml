@@ -6,15 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9072231f-9931-4fc9-ac46-47dedaece349" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/controllers/CourseCreationMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/controllers/CourseCreationMenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/controllers/CourseModifySelectionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/controllers/CourseModifySelectionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/endpoints/CoursePetitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/endpoints/CoursePetitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/resources/erasmus/frontla/CourseModifySelection.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/main/resources/erasmus/frontla/CourseModifySelection.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/target/classes/module-info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prueba/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/prueba/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prueba/BackEnd/learningboot/src/main/java/accesingdatamysql/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/prueba/BackEnd/learningboot/src/main/java/accesingdatamysql/controller/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prueba/BackEnd/learningboot/src/main/java/accesingdatamysql/repository/CourseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/prueba/BackEnd/learningboot/src/main/java/accesingdatamysql/repository/CourseRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

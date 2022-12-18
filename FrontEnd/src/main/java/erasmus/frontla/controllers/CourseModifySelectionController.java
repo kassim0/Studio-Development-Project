@@ -43,11 +43,12 @@ public class CourseModifySelectionController {
         bateria= CoursePetitions.getInstance().getAllCurso();
         System.out.println(bateria.size());
 
-        List<String> nombres = null;
+        List<String> nombres;
 
         for(int i=0;i<=bateria.size();i++){
             nombres.add(bateria.get(i).getName());
         }
+        System.out.println(nombres.size());
 
         observableList = FXCollections.observableArrayList(nombres);
 

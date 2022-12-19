@@ -1,0 +1,165 @@
+.laButton{
+    -fx-background-color:none;
+    -fx-text-fill:white;
+}
+
+.studyButton{
+    -fx-background-color:none;
+    -fx-text-fill:#a9a9a9;
+}
+
+.studyButton:hover{
+    -fx-text-fill:white;
+}
+
+.homeButton{
+    -fx-background-color:none;
+    -fx-text-fill:#a9a9a9;
+}
+
+.homeButton:hover{
+    -fx-text-fill:white;
+}
+
+
+.learningA{
+    -fx-text-fill:  rgba(42, 54, 59, 0.9);
+    -fx-font-size:60;
+    -fx-font-family:'Calibri Light';
+    -fx-alignment:center;
+}
+
+.createButton{
+    -fx-text-fill: white;
+    -fx-font-size:18;
+    -fx-font-family:'SansSerif';
+    -fx-background-color:rgba(42, 54, 59, 0.9);
+}
+
+.createButton:hover{
+    -fx-background-color:#f35f55;
+}
+
+.table{
+    -fx-alignment: center-right;
+    -fx-background-color:white;
+    /*-fx-border-color:#a9a9a9;*/
+}
+
+.mobility{
+    -fx-text-fill: #f35f55;
+    -fx-font-size: 30;
+    -fx-font-family:'Calibri Light';
+    -fx-background-color:none;
+}
+
+.mobility:hover{
+    -fx-text-fill: #f57e7e;
+}
+
+.laPhrase{
+    -fx-text-fill: #a9a9a9;
+    -fx-font-size:12;
+    -fx-font-family:'SansSerif';
+    -fx-font-weight:bold;
+    -fx-alignment:center;
+}
+
+.step1Button{
+    -fx-background-color: #f35f55;
+    -fx-background-radius: 50%;
+    -fx-text-fill: #ffffff;
+    -fx-font-size:20;
+}
+
+.step1Button:hover{
+    -fx-background-color:#64C1F7;
+}
+
+.step2Button{
+    -fx-background-color: rgba(42, 54, 59, 0.9);
+    -fx-background-radius: 50%;
+    -fx-text-fill: #ffffff;
+    -fx-font-size:20;
+}
+
+.step2Button:hover{
+    -fx-background-color:#64C1F7;
+}
+
+.menuButton{
+    -fx-background-color: #f35f55;
+    -fx-background-radius: 50%;
+    -fx-text-fill: #ffffff;
+    -fx-font-size:18;
+}
+
+.Button2{
+    -fx-background-color:rgba(42, 54, 59, 0.9);
+    -fx-text-fill:#ffffff;
+    -fx-background-radius: 50%;
+    -fx-font-size:18;
+}
+
+.hbox{
+    -fx-spacing:150;
+    -fx-alignment:center;
+}
+
+.form{
+    -fx-background-color:white;
+}
+
+.student{
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 30;
+    -fx-font-family:'Calibri Light';
+}
+
+.forms-topics{
+    -fx-text-fill: #a9a9a9;
+    -fx-font-size:18;
+    -fx-font-family:'SansSerif';
+    -fx-font-weight:bold;
+    -fx-alignment:center;
+}
+
+.nextButton:hover{
+    -fx-text-fill:#f35f55;
+    -fx-background-color:#ffffff;
+}
+
+.nextButton{
+    -fx-background-color: #f35f55;
+    -fx-text-fill:white;
+    -fx-font-size:14;
+    -fx-font-family:'SansSerif';
+}
+
+.scroll{
+    -fx-background-color:transparent;
+}
+
+.backButton:hover{
+    -fx-text-fill:#0C9CEE;
+    -fx-background-color:#ffffff;
+}
+
+.backButton{
+    -fx-background-color: #0C9CEE;
+    -fx-text-fill:white;
+    -fx-font-size:14;
+    -fx-font-family:'SansSerif';
+}
+
+.commentButton:hover{
+    -fx-text-fill:#0C9CEE;
+    -fx-background-color:#ffffff;
+}
+
+.commentButton{
+    -fx-background-color: #0C9CEE;
+    -fx-text-fill:white;
+    -fx-font-size:14;
+    -fx-font-family:'SansSerif';
+}

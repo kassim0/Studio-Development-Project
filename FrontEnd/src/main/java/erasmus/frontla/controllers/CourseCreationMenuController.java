@@ -6,13 +6,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Optional;
 
 public class CourseCreationMenuController {
 
@@ -25,23 +25,129 @@ public class CourseCreationMenuController {
     @FXML
     private TextField creditsField;
 
+
+    @FXML
+    private Text pageText;
+
+
     @FXML
     private Button backButton;
 
     @FXML
     private Button createButton;
 
+    private String oldname;
+
+    public void init(Course course) throws Exception {
+        nameField.setText(course.getName());
+        oldname = nameField.getText();
+        descriptionField.setText(course.getDefinition());
+        creditsField.setText(course.getCredits().toString());
+        pageText.setText("Modify Course");
+        createButton.setText("Modify");
+
+    }
+
     @FXML
     void createCourse(ActionEvent event) throws Exception {
-        Course course = new Course(nameField.getText(),descriptionField.getText(),Integer.valueOf(creditsField.getText()));
+        if (createButton.getText().compareTo("Create")==0) {
+            if(nameField.getText().isEmpty()){
+                Alert alerta = new Alert(Alert.AlertType.ERROR);
+                alerta.setTitle("Warning");
+                alerta.setHeaderText("Course Title");
+                alerta.setContentText("The course must have a title");
+                Optional<ButtonType> resultado = alerta.showAndWait();
+            }
+            else if(CoursePetitions.getInstance().findByName(nameField.getText()).getName()!=null){
+                Alert alerta = new Alert(Alert.AlertType.ERROR);
+                alerta.setTitle("Warning");
+                alerta.setHeaderText("Course Title");
+                alerta.setContentText("There is a course that already have that title");
+                Optional<ButtonType> resultado = alerta.showAndWait();
 
-        course.setName(nameField.getText());
-        course.setDefinition(descriptionField.getText());
-        course.setCredits(Integer.parseInt(creditsField.getText()));
+            }
+            else if(descriptionField.getText().isEmpty()){
+                Alert alerta = new Alert(Alert.AlertType.ERROR);
+                alerta.setTitle("Warning");
+                alerta.setHeaderText("Course description");
+                alerta.setContentText("The course must have a description");
+                Optional<ButtonType> resultado = alerta.showAndWait();
+            }
+            else if(nameField.getText().isEmpty()){
+                Alert alerta = new Alert(Alert.AlertType.ERROR);
+                alerta.setTitle("Warning");
+                alerta.setHeaderText("Course credits");
+                alerta.setContentText("The course must have a number of credits");
+                Optional<ButtonType> resultado = alerta.showAndWait();
+            }
+            else {
+                Course course = new Course(nameField.getText(), descriptionField.getText(), Integer.valueOf(creditsField.getText()));
 
-        CoursePetitions a = CoursePetitions.getInstance();
+                course.setName(nameField.getText());
+                course.setDefinition(descriptionField.getText());
+                course.setCredits(Integer.parseInt(creditsField.getText()));
 
-        a.createCourse(course);
+                CoursePetitions a = CoursePetitions.getInstance();
+
+                a.createCourse(course);
+                Alert alerta = new Alert(Alert.AlertType.CONFIRMATION);
+                alerta.setTitle("CONFIRMATION");
+                alerta.setHeaderText("A course has been created");
+                Optional<ButtonType> resultado = alerta.showAndWait();
+            }
+        }
+        else{
+            CoursePetitions.getInstance().deleteCourse(oldname);
+            if(nameField.getText().isEmpty()){
+                Alert alerta = new Alert(Alert.AlertType.ERROR);
+                alerta.setTitle("Warning");
+                alerta.setHeaderText("Course Title");
+                alerta.setContentText("The course must have a title");
+                Optional<ButtonType> resultado = alerta.showAndWait();
+            }
+            else if(CoursePetitions.getInstance().findByName(nameField.getText()).getName()!= null){
+                Alert alerta = new Alert(Alert.AlertType.ERROR);
+                alerta.setTitle("Warning");
+                alerta.setHeaderText("Course Title");
+                alerta.setContentText("There is a course that already have that title");
+                Optional<ButtonType> resultado = alerta.showAndWait();
+
+            }
+            else if(descriptionField.getText().isEmpty()){
+                Alert alerta = new Alert(Alert.AlertType.ERROR);
+                alerta.setTitle("Warning");
+                alerta.setHeaderText("Course description");
+                alerta.setContentText("The course must have a description");
+                Optional<ButtonType> resultado = alerta.showAndWait();
+            }
+            else if(nameField.getText().isEmpty()){
+                Alert alerta = new Alert(Alert.AlertType.ERROR);
+                alerta.setTitle("Warning");
+                alerta.setHeaderText("Course credits");
+                alerta.setContentText("The course must have a number of credits");
+                Optional<ButtonType> resultado = alerta.showAndWait();
+            }
+
+            else {
+
+
+                Course course = new Course(nameField.getText(), descriptionField.getText(), Integer.valueOf(creditsField.getText()));
+
+
+                course.setName(nameField.getText());
+                course.setDefinition(descriptionField.getText());
+                course.setCredits(Integer.parseInt(creditsField.getText()));
+
+                CoursePetitions a = CoursePetitions.getInstance();
+
+                a.createCourse(course);
+                Alert alerta = new Alert(Alert.AlertType.CONFIRMATION);
+                alerta.setTitle("CONFIRMATION");
+                alerta.setHeaderText("A course has been modified");
+                Optional<ButtonType> resultado = alerta.showAndWait();
+            }
+        }
+
 
     }
 

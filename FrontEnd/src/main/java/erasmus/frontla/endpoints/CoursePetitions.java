@@ -93,4 +93,19 @@ public class CoursePetitions {
         return gsonMod.fromJson(response.body(), Course.class);
     }
 
+    public String deleteCourse(String name) throws Exception {
+
+        Gson gsonMod = new Gson();
+        HttpRequest a= HttpRequest.newBuilder()
+                .uri(new URI(linkStatic+"/delete?name="+name))
+                .DELETE()
+                .build();
+        HttpClient httpClient = HttpClient.newHttpClient();
+        HttpResponse<String> response = httpClient.send(a, HttpResponse.BodyHandlers.ofString());
+
+        String curso = gsonMod.fromJson(response.body(), String.class);
+
+        return curso;
+    }
+
 }

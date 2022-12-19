@@ -8,19 +8,19 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class CourseModifySelectionController {
 
@@ -34,35 +34,32 @@ public class CourseModifySelectionController {
     @FXML
     private Button modifyButton;
     public ObservableList<String> observableList;
+    int delete;
 
 
     public void cargarDatos() throws Exception {
 
-        List<Course> bateria;
+        CoursePetitions coursePetitions = new CoursePetitions();
+        List<Course> listadecursos = null;
+        listadecursos = coursePetitions.getAllCurso();
 
-        bateria= CoursePetitions.getInstance().getAllCurso();
-        System.out.println(bateria.size());
+        for (Course curse : listadecursos) {
+            String nombreAux =curse.getName();
 
-        List<String> nombres;
-
-        for(int i=0;i<=bateria.size();i++){
-            nombres.add(bateria.get(i).getName());
+            listCourse.getItems().add(nombreAux);
         }
-        System.out.println(nombres.size());
-
-        observableList = FXCollections.observableArrayList(nombres);
-
-        listCourse.setItems(observableList);
-
-        System.out.println(bateria);
     }
 
-    public void init() throws Exception {
-//
-//        courseId.setCellValueFactory(new PropertyValueFactory<Course,Integer>("id"));
-//        courseName.setCellValueFactory(new PropertyValueFactory<Course,String>("name"));
-//        System.out.println("ss");
+    public void init(int a) throws Exception {
+
         cargarDatos();
+        delete=a;
+        if(a==1){
+            modifyButton.setText("Delete");
+        }
+        else{
+            modifyButton.setText("Modify");
+        }
     }
 
     @FXML
@@ -79,7 +76,34 @@ public class CourseModifySelectionController {
     }
 
     @FXML
-    void modifyCourse(ActionEvent event) {
+    void modifyCourse(ActionEvent event) throws Exception {
+        if(delete==1){
+            String selected = listCourse.getSelectionModel().getSelectedItem();
+            CoursePetitions.getInstance().deleteCourse(selected);
+            Alert alerta = new Alert(Alert.AlertType.CONFIRMATION);
+            alerta.setTitle("CONFIRMATION");
+            alerta.setHeaderText("A course has been deleted");
+            Optional<ButtonType> resultado = alerta.showAndWait();
+        }
+        else {
+            String selected = listCourse.getSelectionModel().getSelectedItem();
+            Course toModify = CoursePetitions.getInstance().findByName(selected);
+
+            Stage stage = new Stage();
+            URL paneUrl = Loader.LoaderViewCont("CourseCreationMenu.fxml");
+
+            FXMLLoader paneL = new FXMLLoader(paneUrl);
+            AnchorPane pane = paneL.load();
+
+            CourseCreationMenuController controller = paneL.getController();
+            controller.init(toModify);
+            Scene scene = new Scene(pane);
+            stage.setTitle("Modify");
+            stage.setScene(scene);
+            stage.show();
+            Node n = (Node) event.getSource();
+            n.getScene().getWindow().hide();
+        }
 
     }
 

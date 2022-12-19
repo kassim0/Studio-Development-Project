@@ -43,9 +43,10 @@ public class CourseController {
     }
 
     @DeleteMapping(path="/delete")
-    public @ResponseBody String deleteCourse(@RequestParam String id) {
+    public @ResponseBody String deleteCourse(@RequestParam String name) {
         // This returns a JSON or XML with the users
-        Integer idToSearch= Integer.valueOf(id);
+        Integer idToSearch= Integer.valueOf(CourseRepository.findByName(name));
+        Integer id= Integer.valueOf(idToSearch);
         Course CourseToChange = null;
         if(CourseRepository.existsById(idToSearch)){
             CourseRepository.deleteById(idToSearch);

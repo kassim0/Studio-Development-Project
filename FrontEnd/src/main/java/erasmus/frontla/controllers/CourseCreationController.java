@@ -40,7 +40,21 @@ public class CourseCreationController {
     }
 
     @FXML
-    void deleteCourse(ActionEvent event) {
+    void deleteCourse(ActionEvent event) throws Exception {
+        Stage stage = new Stage();
+        URL paneUrl = Loader.LoaderViewCont("CourseModifySelection.fxml");
+
+        FXMLLoader paneL = new FXMLLoader(paneUrl);
+        AnchorPane pane = paneL.load();
+
+        CourseModifySelectionController controller = paneL.getController();
+        controller.init(1);
+        Scene scene = new Scene(pane);
+        stage.setTitle("Modify");
+        stage.setScene(scene);
+        stage.show();
+        Node n = (Node)event.getSource();
+        n.getScene().getWindow().hide();
 
     }
 
@@ -53,7 +67,7 @@ public class CourseCreationController {
         AnchorPane pane = paneL.load();
 
         CourseModifySelectionController controller = paneL.getController();
-        controller.init();
+        controller.init(0);
         Scene scene = new Scene(pane);
         stage.setTitle("Modify");
         stage.setScene(scene);

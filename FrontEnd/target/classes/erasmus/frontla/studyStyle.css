@@ -1,0 +1,123 @@
+.studyButton{
+    -fx-background-color:none;
+    -fx-text-fill:white;
+}
+
+.laButton{
+    -fx-background-color:none;
+    -fx-text-fill:#a9a9a9;
+}
+
+.laButton:hover{
+    -fx-text-fill:white;
+}
+
+.homeButton{
+    -fx-background-color:none;
+    -fx-text-fill:#a9a9a9;
+}
+
+.homeButton:hover{
+    -fx-text-fill:white;
+}
+
+.choose-faculty{
+    -fx-text-fill: #a9a9a9;
+    -fx-font-size:9;
+    -fx-font-family:'SansSerif';
+    -fx-font-weight:bold;
+    -fx-alignment:center;
+}
+
+.studyProg{
+    -fx-text-fill:  rgba(42, 54, 59, 0.9);
+    -fx-font-size:40;
+    -fx-font-family:'Calibri Light';
+    -fx-alignment:center;
+}
+
+.name-faculty{
+    -fx-text-fill: #f35f55;
+    -fx-font-size: 30;
+    -fx-font-family:'Calibri Light';
+    -fx-font-weight:bold;
+}
+
+.name-faculty:hover{
+    -fx-text-fill: #f57e7e;
+}
+
+
+.deans{
+    -fx-text-fill: #504f4f;
+    -fx-font-size: 12;
+    -fx-font-family:'Calibri Light';
+}
+
+.deans-info{
+    -fx-text-fill: #b9b6b6;
+    -fx-font-size: 12;
+    -fx-font-family:'Calibri Light';
+
+}
+
+.winter{
+    -fx-text-fill:#828282;
+    -fx-font-family:'SansSerif';
+    -fx-font-size:16px;
+    -fx-background-color:none;
+}
+
+.winter:hover{
+    -fx-text-fill:#0C9CEE;
+}
+
+.spring{
+    -fx-text-fill:#828282;
+    -fx-font-family:'SansSerif';
+    -fx-font-size:16px;
+    -fx-background-color:none;
+}
+
+.spring:hover{
+    -fx-text-fill:#0C9CEE;
+}
+
+.menu{
+    -fx-alignment:center;
+}
+
+.menuButton{
+    -fx-background-color: #0C9CEE;
+    -fx-background-radius: 50%;
+    -fx-text-fill: #ffffff;
+    -fx-font-size:16;
+}
+
+.menuButton:hover{
+    -fx-background-color:#64C1F7;
+}
+
+.hbox{
+    -fx-spacing:10;
+    -fx-alignment:center;
+}
+
+.Button2{
+    -fx-background-color:none;
+    -fx-text-fill:#808080;
+    -fx-background-radius: 50%;
+    -fx-font-size:16;
+}
+
+.Button2:hover{
+    -fx-background-color:#DEE0E3;
+    -fx-text-fill:#808080;
+    -fx-background-radius: 50%;
+    -fx-font-size:16;
+}
+
+
+
+
+

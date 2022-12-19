@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eaeb9f3e-19b0-4647-b185-09086609e07e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/controllers/CourseViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FrontEnd/src/main/resources/erasmus/frontla/courseView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/controllers/SeeCoursesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/controllers/SeeCoursesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learningboot/src/main/java/accesingdatamysql/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/learningboot/src/main/java/accesingdatamysql/controller/CourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learningboot/target/classes/accesingdatamysql/controller/CourseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/learningboot/target/classes/accesingdatamysql/controller/CourseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/controllers/CourseCreationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/controllers/CourseCreationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/controllers/CourseCreationMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/controllers/CourseCreationMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/controllers/CourseModifySelectionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/controllers/CourseModifySelectionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/endpoints/CoursePetitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/endpoints/CoursePetitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/main/resources/erasmus/frontla/CourseCreationMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/main/resources/erasmus/frontla/CourseCreationMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/HelloApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/HelloApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/controllers/CourseModifySelectionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/controllers/CourseModifySelectionController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/controllers/SeeCoursesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/controllers/SeeCoursesController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +26,22 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />

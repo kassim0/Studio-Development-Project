@@ -1,0 +1,57 @@
+.coursesButton{
+    -fx-background-color:none;
+    -fx-text-fill:#a9a9a9;
+}
+
+.coursesButton:hover{
+    -fx-text-fill:white;
+}
+
+.coursesButton2{
+    -fx-background-color:none;
+    -fx-text-fill:white;
+}
+
+.backButton{
+    -fx-background-color: #f35f55;
+    -fx-text-fill:white;
+    -fx-font-size:14;
+    -fx-font-family:'SansSerif';
+}
+
+.backButton:hover{
+    -fx-background-color: white;
+    -fx-text-fill: #f35f55;
+    -fx-border-color:#f35f55;
+}
+
+.createButton{
+    -fx-background-color:#0C9CEE;
+    -fx-text-fill:white;
+    -fx-font-size:14;
+    -fx-font-family:'SansSerif';
+}
+
+.createButton:hover{
+    -fx-background-color: white;
+    -fx-text-fill:#0C9CEE;
+    -fx-border-color:#0C9CEE;
+}
+
+.courseMenu{
+    -fx-text-fill:white;
+    -fx-background-color:none;
+}
+
+.menu-button {
+    -fx-background-color: none;
+}
+
+.menu-button .label {
+    -fx-text-fill: white;
+}
+
+.menu-button .arrow {
+    -fx-background-color: #a9a9a9;
+}
+

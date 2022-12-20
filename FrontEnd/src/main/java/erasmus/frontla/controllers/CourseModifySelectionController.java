@@ -107,4 +107,57 @@ public class CourseModifySelectionController {
 
     }
 
+    @FXML
+    void createCourse(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        AnchorPane pane =  Loader.LoaderView("CourseCreationMenu.fxml");
+        Scene scene = new Scene(pane);
+        stage.setTitle("Create");
+        stage.setScene(scene);
+        stage.show();
+        Node n = (Node)event.getSource();
+        n.getScene().getWindow().hide();
+
+
+    }
+
+    @FXML
+    void deleteCourse(ActionEvent event) throws Exception {
+        Stage stage = new Stage();
+        URL paneUrl = Loader.LoaderViewCont("CourseModifySelection.fxml");
+
+        FXMLLoader paneL = new FXMLLoader(paneUrl);
+        AnchorPane pane = paneL.load();
+
+        CourseModifySelectionController controller = paneL.getController();
+        controller.init(1);
+        Scene scene = new Scene(pane);
+        stage.setTitle("Modify");
+        stage.setScene(scene);
+        stage.show();
+        Node n = (Node)event.getSource();
+        n.getScene().getWindow().hide();
+
+    }
+
+    @FXML
+    void modifyCoursePage(ActionEvent event) throws Exception {
+        Stage stage = new Stage();
+        URL paneUrl = Loader.LoaderViewCont("CourseModifySelection.fxml");
+
+        FXMLLoader paneL = new FXMLLoader(paneUrl);
+        AnchorPane pane = paneL.load();
+
+        CourseModifySelectionController controller = paneL.getController();
+        controller.init(0);
+        Scene scene = new Scene(pane);
+        stage.setTitle("Modify");
+        stage.setScene(scene);
+        stage.show();
+        Node n = (Node)event.getSource();
+        n.getScene().getWindow().hide();
+
+
+    }
+
 }

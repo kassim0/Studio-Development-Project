@@ -17,7 +17,7 @@ import java.io.IOException;
 
 import static erasmus.frontla.Loader.LoaderView;
 
-public class LearningAgreementController extends Application {
+public class LearningAgreementController {
 
     @FXML
     private Button button1;

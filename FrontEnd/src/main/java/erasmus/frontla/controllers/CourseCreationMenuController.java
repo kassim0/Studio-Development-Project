@@ -99,7 +99,7 @@ public class CourseCreationMenuController {
             }
         }
         else{
-            CoursePetitions.getInstance().deleteCourse(oldname);
+            //CoursePetitions.getInstance().deleteCourse(oldname);
             if(nameField.getText().isEmpty()){
                 Alert alerta = new Alert(Alert.AlertType.ERROR);
                 alerta.setTitle("Warning");

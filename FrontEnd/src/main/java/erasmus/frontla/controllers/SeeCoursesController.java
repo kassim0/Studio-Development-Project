@@ -90,7 +90,7 @@ public class SeeCoursesController {
 
     @FXML
     void seeCourses(ActionEvent event) throws Exception {
-        helloController.texto();
+        //helloController.texto();
         poblar();
     }
 

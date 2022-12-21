@@ -52,8 +52,8 @@
                   <Label layoutX="36.0" layoutY="251.0" styleClass="deans-info" stylesheets="@studyStyle.css" text="creef@put.poznan.pl" />
                   <Button fx:id="winterButton11" layoutX="19.0" layoutY="98.0" mnemonicParsing="false" onAction="#winterView" prefHeight="31.0" prefWidth="152.0" styleClass="winter" stylesheets="@studyStyle.css" text=" Winter Semester" textFill="WHITE" />
                   <Button fx:id="springButton11" layoutX="21.0" layoutY="123.0" mnemonicParsing="false" onAction="#springView" prefHeight="31.0" prefWidth="152.0" styleClass="spring" stylesheets="@studyStyle.css" text="Spring Semester" textFill="WHITE" />
-                  <Hyperlink layoutX="28.0" layoutY="14.0" prefHeight="48.0" prefWidth="331.0" styleClass="name-faculty" stylesheets="@studyStyle.css" text="Control, Robotics" />
-                  <Hyperlink layoutX="26.0" layoutY="50.0" prefHeight="48.0" prefWidth="352.0" styleClass="name-faculty" stylesheets="@studyStyle.css" text="and Electrical Engineering" />
+                  <Hyperlink layoutX="28.0" layoutY="14.0" onAction="#openLink4" prefHeight="48.0" prefWidth="331.0" styleClass="name-faculty" stylesheets="@studyStyle.css" text="Materials Engineering " />
+                  <Hyperlink layoutX="26.0" layoutY="50.0" onAction="#openLink4" prefHeight="48.0" prefWidth="352.0" styleClass="name-faculty" stylesheets="@studyStyle.css" text="and Technical Physics" />
                </children>
                <effect>
                   <DropShadow color="lightgray" offsetX="5.0" offsetY="5.0" />
@@ -63,7 +63,7 @@
             <HBox layoutY="140.0" prefHeight="37.0" prefWidth="1376.0" styleClass="hbox" stylesheets="@studyStyle.css">
                <children>
                   <Button id="menuButton" fx:id="button" mnemonicParsing="false" onAction="#Page1View" prefHeight="34.0" prefWidth="38.0" styleClass="Button2" stylesheets="@studyStyle.css" text="«" />
-                  <Button id="menuButton" fx:id="button2" mnemonicParsing="false" onAction="#Page1view" prefHeight="34.0" prefWidth="38.0" styleClass="Button2" stylesheets="@studyStyle.css" text="1" />
+                  <Button id="menuButton" fx:id="button2" mnemonicParsing="false" onAction="#Page1View" prefHeight="34.0" prefWidth="38.0" styleClass="Button2" stylesheets="@studyStyle.css" text="1" />
                   <Button id="menuButton" fx:id="button1" mnemonicParsing="false" onAction="#Page2View" prefHeight="34.0" prefWidth="38.0" styleClass="menuButton" stylesheets="@studyStyle.css" text="2" />
                   <Button id="menuButton" fx:id="button21" mnemonicParsing="false" onAction="#Page3View" prefHeight="34.0" prefWidth="38.0" styleClass="Button2" stylesheets="@studyStyle.css" text="3" />
                   <Button id="menuButton" fx:id="button3" mnemonicParsing="false" onAction="#Page3View" prefHeight="34.0" prefWidth="38.0" styleClass="Button2" stylesheets="@studyStyle.css" text="»" />
@@ -78,8 +78,7 @@
                   <Label layoutX="36.0" layoutY="251.0" styleClass="deans-info" stylesheets="@studyStyle.css" text="office_cat@put.poznan.pl" />
                   <Button fx:id="winterButton111" layoutX="19.0" layoutY="98.0" mnemonicParsing="false" onAction="#winterView" prefHeight="31.0" prefWidth="152.0" styleClass="winter" stylesheets="@studyStyle.css" text=" Winter Semester" textFill="WHITE" />
                   <Button fx:id="springButton111" layoutX="21.0" layoutY="123.0" mnemonicParsing="false" onAction="#springView" prefHeight="31.0" prefWidth="152.0" styleClass="spring" stylesheets="@studyStyle.css" text="Spring Semester" textFill="WHITE" />
-                  <Hyperlink layoutX="28.0" layoutY="14.0" prefHeight="48.0" prefWidth="337.0" styleClass="name-faculty" stylesheets="@studyStyle.css" text="Computing" />
-                  <Hyperlink layoutX="26.0" layoutY="50.0" prefHeight="48.0" prefWidth="352.0" styleClass="name-faculty" stylesheets="@studyStyle.css" text="and Telecommunications" />
+                  <Hyperlink layoutX="30.0" layoutY="32.0" onAction="#openLink5" prefHeight="48.0" prefWidth="337.0" styleClass="name-faculty" stylesheets="@studyStyle.css" text="Mechanical Engineering" />
                </children>
                <effect>
                   <DropShadow color="lightgray" offsetX="5.0" offsetY="5.0" />
@@ -94,8 +93,8 @@
                   <Label layoutX="36.0" layoutY="251.0" styleClass="deans-info" stylesheets="@studyStyle.css" text="wilit@put.poznan.pl" />
                   <Button fx:id="winterButton112" layoutX="19.0" layoutY="98.0" mnemonicParsing="false" onAction="#winterView" prefHeight="31.0" prefWidth="152.0" styleClass="winter" stylesheets="@studyStyle.css" text=" Winter Semester" textFill="WHITE" />
                   <Button fx:id="springButton112" layoutX="21.0" layoutY="123.0" mnemonicParsing="false" onAction="#springView" prefHeight="31.0" prefWidth="152.0" styleClass="spring" stylesheets="@studyStyle.css" text="Spring Semester" textFill="WHITE" />
-                  <Hyperlink layoutX="28.0" layoutY="14.0" prefHeight="48.0" prefWidth="331.0" styleClass="name-faculty" stylesheets="@studyStyle.css" text="Civil and " />
-                  <Hyperlink layoutX="26.0" layoutY="50.0" prefHeight="48.0" prefWidth="352.0" styleClass="name-faculty" stylesheets="@studyStyle.css" text="Transport Engineering" />
+                  <Hyperlink layoutX="28.0" layoutY="14.0" onAction="#openLink6" prefHeight="48.0" prefWidth="352.0" styleClass="name-faculty" stylesheets="@studyStyle.css" text="Environmental Engineering" />
+                  <Hyperlink layoutX="26.0" layoutY="50.0" onAction="#openLink6" prefHeight="48.0" prefWidth="352.0" styleClass="name-faculty" stylesheets="@studyStyle.css" text="and Energy" />
                </children>
                <effect>
                   <DropShadow color="lightgray" offsetX="5.0" offsetY="5.0" />

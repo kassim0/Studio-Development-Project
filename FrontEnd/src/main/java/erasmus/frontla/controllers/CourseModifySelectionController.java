@@ -160,4 +160,6 @@ public class CourseModifySelectionController {
 
     }
 
+    public void homeView(ActionEvent actionEvent) {
+    }
 }

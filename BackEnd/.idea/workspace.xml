@@ -16,6 +16,9 @@
       <change beforePath="$PROJECT_DIR$/../FrontEnd/src/main/resources/erasmus/frontla/CourseCreationMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/main/resources/erasmus/frontla/CourseCreationMenu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/src/main/resources/erasmus/frontla/CourseDescription.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/controllers/CourseModifySelectionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/controllers/CourseModifySelectionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/controllers/CourseModifySelectionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/controllers/CourseModifySelectionController.class" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

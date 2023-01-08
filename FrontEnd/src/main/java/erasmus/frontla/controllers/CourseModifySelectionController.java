@@ -17,6 +17,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -25,7 +26,8 @@ import java.util.Optional;
 
 public class CourseModifySelectionController {
 
-
+    @FXML
+    private Text pageText;
     @FXML
     private ListView<String> listCourse;
 
@@ -36,8 +38,6 @@ public class CourseModifySelectionController {
     private Button modifyButton;
     public ObservableList<String> observableList;
 
-    @FXML
-    private Text pageText;
     int delete;
 
 
@@ -60,6 +60,7 @@ public class CourseModifySelectionController {
         delete=a;
         if(a==1){
             modifyButton.setText("Delete");
+
             pageText.setText("Delete");
 
         }

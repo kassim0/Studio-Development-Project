@@ -16,12 +16,16 @@ public class Course {
 
      String university;
 
-    public Course(String name, String definition, Integer credits,String semester, String university) {
+     String author;
+
+    public Course(String name, String definition, Integer credits,String semester, String university,String author) {
         this.name = name;
         this.definition = definition;
         this.credits = credits;
         this.semester=semester;
         this.university = university;
+        this.author=author;
+
     }
 
     public Integer getId() {
@@ -30,6 +34,12 @@ public class Course {
 
     public void setId(Integer id) {
         this.id=id;
+    }
+
+    public String getAuthor() { return author; }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     public String getName() {

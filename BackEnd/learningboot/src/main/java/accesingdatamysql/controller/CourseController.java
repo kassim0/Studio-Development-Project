@@ -5,6 +5,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import accesingdatamysql.repository.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -36,7 +37,7 @@ public class CourseController {
     public @ResponseBody Course getCourse(@RequestParam String id) {
         // This returns a JSON or XML with the users
         Integer idToSearch= Integer.valueOf(id);
-        Course CourseToChange = null;
+        Course CourseToChange = new Course();
         if(CourseRepository.existsById(idToSearch)){
             CourseToChange =CourseRepository.findById(idToSearch).get();
         };
@@ -79,6 +80,17 @@ public class CourseController {
 
     @GetMapping(path="/allByUniversity")
     public @ResponseBody List<Course> getCoursesByUniversity(@RequestParam String university){
+        List<Integer> univToSearch= CourseRepository.getCoursesByUniversity(university);
+        ArrayList<Course> coursesOfUniv = new ArrayList<>();
+
+        for(Integer id:univToSearch){
+            if(CourseRepository.existsById(id)){
+                Course courseToAdd = CourseRepository.findById(id).get();
+                coursesOfUniv.add(courseToAdd);
+            };
+        }
+        return coursesOfUniv;
+        /*
         Iterable<Course> todo =  CourseRepository.findAll();
         List<Course> coursesOfUniv = null;
         for(Course unCurso : todo){
@@ -86,7 +98,8 @@ public class CourseController {
                 coursesOfUniv.add(unCurso);
             }
         }
-        return coursesOfUniv;
+        */
+        //return coursesOfUniv;
     }
 
 

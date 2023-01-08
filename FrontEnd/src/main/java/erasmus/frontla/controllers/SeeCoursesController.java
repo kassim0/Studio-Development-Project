@@ -80,6 +80,8 @@ public class SeeCoursesController {
         List courseSelected = lst.getSelectionModel().getSelectedItems();
         String courseSelectedInString = (String) courseSelected.get(0);
         Course curso = CoursePetitions.getInstance().findByName(courseSelectedInString);
+        System.out.println(curso.getUniversity());
+        System.out.println("---------------");
 
         Stage stage = new Stage();
         URL paneUrl = Loader.LoaderViewCont("courseView.fxml");
@@ -216,6 +218,9 @@ public class SeeCoursesController {
     void selectUniversity(ActionEvent event) throws Exception {
         String s = universities.getSelectionModel().getSelectedItem().toString();
         selectedUniversity.setText(s);
+        System.out.println(s);
+        System.out.println("---------------------------------------------------");
+
 
         CoursePetitions coursePetitions = new CoursePetitions();
         List<Course> listadecursos = null;
@@ -231,5 +236,6 @@ public class SeeCoursesController {
 
         lst.getItems().clear();
         lst.getItems().addAll(searchList(searchBar.getText(), nombreDeLosCursos));
+
     }
 }

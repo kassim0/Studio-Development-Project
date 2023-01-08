@@ -111,7 +111,7 @@ public class CoursePetitions {
 
         Gson gsonMod = new Gson();
         HttpRequest a= HttpRequest.newBuilder()
-                .uri(new URI(linkStatic+"/allByUniversity?university"+university))
+                .uri(new URI(linkStatic+"/allByUniversity?university="+university))
                 .GET()
                 .build();
         HttpClient httpClient = HttpClient.newHttpClient();

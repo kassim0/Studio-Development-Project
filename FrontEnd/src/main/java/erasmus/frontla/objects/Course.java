@@ -14,11 +14,14 @@ public class Course {
 
      String semester;
 
-    public Course(String name, String definition, Integer credits,String semester) {
+     String university;
+
+    public Course(String name, String definition, Integer credits,String semester, String university) {
         this.name = name;
         this.definition = definition;
         this.credits = credits;
         this.semester=semester;
+        this.university = university;
     }
 
     public Integer getId() {
@@ -59,5 +62,8 @@ public class Course {
         this.credits = credits;
     }
 
+    public String getUniversity() {return university;}
+
+    public void setUniversity(String university) {this.university = university;}
 }
 

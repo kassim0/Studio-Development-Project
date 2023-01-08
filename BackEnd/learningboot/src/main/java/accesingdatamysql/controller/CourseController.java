@@ -5,6 +5,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import accesingdatamysql.repository.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController // This means that this class is a Controller
@@ -74,6 +75,18 @@ public class CourseController {
             CourseToChange =CourseRepository.findById(idToSearch).get();
         };
         return CourseToChange;
+    }
+
+    @GetMapping(path="/allByUniversity")
+    public @ResponseBody List<Course> getCoursesByUniversity(@RequestParam String university){
+        Iterable<Course> todo =  CourseRepository.findAll();
+        List<Course> coursesOfUniv = null;
+        for(Course unCurso : todo){
+            if(unCurso.university==university){
+                coursesOfUniv.add(unCurso);
+            }
+        }
+        return coursesOfUniv;
     }
 
 

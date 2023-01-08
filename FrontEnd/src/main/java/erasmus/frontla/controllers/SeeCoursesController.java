@@ -48,6 +48,11 @@ public class SeeCoursesController {
     @FXML
     private Button nuevaVista;
 
+    @FXML
+    private ComboBox<String> universities;
+    @FXML
+    private Label selectedUniversity;
+
     HelloController helloController = new HelloController();
 
     private final StringProperty project = new SimpleStringProperty();
@@ -64,6 +69,11 @@ public class SeeCoursesController {
         project.set(value);
     }
 
+
+    public void initialize(){
+        ObservableList<String> list = FXCollections.observableArrayList("University_of_Poznan", "University_of_Warsawa", "University_of_Krakow");
+        universities.setItems(list);
+    }
 
     @FXML
     void nuevaVista(ActionEvent event) throws Exception {
@@ -90,7 +100,6 @@ public class SeeCoursesController {
 
     @FXML
     void seeCourses(ActionEvent event) throws Exception {
-        //helloController.texto();
         poblar();
     }
 
@@ -104,9 +113,7 @@ public class SeeCoursesController {
 
             lst.getItems().add(nombreAux);
         }
-        System.out.println("**** " + CoursePetitions.getInstance().findByName("cursoDos").getDefinition() +" ***");
     }
-
 
     public void listViewSelectedCourse() throws Exception {
         List courseSelected = lst.getSelectionModel().getSelectedItems();
@@ -204,5 +211,25 @@ public class SeeCoursesController {
         stage.show();
         Node n = (Node)event.getSource();
         n.getScene().getWindow().hide();
+    }
+    @FXML
+    void selectUniversity(ActionEvent event) throws Exception {
+        String s = universities.getSelectionModel().getSelectedItem().toString();
+        selectedUniversity.setText(s);
+
+        CoursePetitions coursePetitions = new CoursePetitions();
+        List<Course> listadecursos = null;
+        listadecursos = coursePetitions.getCoursesByUniversity(s);
+
+        ArrayList<String> nombreDeLosCursos = new ArrayList<>();
+
+        for (Course curse : listadecursos) {
+            String nombreAux =curse.getName();
+
+            nombreDeLosCursos.add(nombreAux);
+        }
+
+        lst.getItems().clear();
+        lst.getItems().addAll(searchList(searchBar.getText(), nombreDeLosCursos));
     }
 }

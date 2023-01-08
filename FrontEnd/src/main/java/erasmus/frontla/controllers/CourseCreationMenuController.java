@@ -31,7 +31,8 @@ public class CourseCreationMenuController {
     @FXML
     private TextField creditsField;
 
-
+    @FXML
+    private ComboBox<String> cbUniversities;
     @FXML
     private Text pageText;
 
@@ -52,6 +53,9 @@ public class CourseCreationMenuController {
         ArrayList<String> listSeme=new ArrayList<String>(Arrays.asList("winter","summer","full year"));
         ObservableList<String> list = FXCollections.observableArrayList(listSeme);
         semesterPick.setItems(list);
+
+        ObservableList<String> listUniv = FXCollections.observableArrayList("University_of_Poznan", "University_of_Warsawa", "University_of_Krakow");
+        cbUniversities.setItems(listUniv);
     }
 
     public void init(Course course) throws Exception {
@@ -97,8 +101,15 @@ public class CourseCreationMenuController {
                 alerta.setContentText("The course must have a number of credits");
                 Optional<ButtonType> resultado = alerta.showAndWait();
             }
+            else if(cbUniversities.getSelectionModel().getSelectedItem().toString()==""){
+                Alert alerta = new Alert(Alert.AlertType.ERROR);
+                alerta.setTitle("Warning");
+                alerta.setHeaderText("University Selection");
+                alerta.setContentText("The course must have a university selected");
+                Optional<ButtonType> resultado = alerta.showAndWait();
+            }
             else {
-                Course course = new Course(nameField.getText(), descriptionField.getText(), Integer.valueOf(creditsField.getText()),semesterPick.getValue());
+                Course course = new Course(nameField.getText(), descriptionField.getText(), Integer.valueOf(creditsField.getText()),semesterPick.getValue(), cbUniversities.getSelectionModel().getSelectedItem());
 
                 course.setName(nameField.getText());
                 course.setDefinition(descriptionField.getText());
@@ -150,8 +161,7 @@ public class CourseCreationMenuController {
             else {
 
 
-                Course course = new Course(nameField.getText(), descriptionField.getText(), Integer.valueOf(creditsField.getText()),semesterPick.getValue());
-
+                Course course = new Course(nameField.getText(), descriptionField.getText(), Integer.valueOf(creditsField.getText()),semesterPick.getValue(), cbUniversities.getSelectionModel().getSelectedItem());
 
                 course.setName(nameField.getText());
                 course.setDefinition(descriptionField.getText());
@@ -247,6 +257,10 @@ public class CourseCreationMenuController {
         Node n = (Node)event.getSource();
         n.getScene().getWindow().hide();
 
+
+    }
+    @FXML
+    void selectedUniversity(ActionEvent event) {
 
     }
 

@@ -107,5 +107,20 @@ public class CoursePetitions {
 
         return curso;
     }
+    public List<Course> getCoursesByUniversity(String university) throws Exception {
+
+        Gson gsonMod = new Gson();
+        HttpRequest a= HttpRequest.newBuilder()
+                .uri(new URI(linkStatic+"/allByUniversity?university"+university))
+                .GET()
+                .build();
+        HttpClient httpClient = HttpClient.newHttpClient();
+        HttpResponse<String> response = httpClient.send(a, HttpResponse.BodyHandlers.ofString());
+
+        Type listType = new TypeToken<List<Course>>() {}.getType();
+        List<Course> curso = gsonMod.fromJson(response.body(), listType);
+
+        return curso;
+    }
 
 }

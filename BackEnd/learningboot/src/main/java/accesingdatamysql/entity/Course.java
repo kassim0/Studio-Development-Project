@@ -19,6 +19,8 @@ public class Course {
 
     public String semester;
 
+    public String university;
+
     public Integer getId() {
         return id;
     }
@@ -58,4 +60,8 @@ public class Course {
     public void setCredits(Integer credits) {
         this.credits = credits;
     }
+
+    public String getUniversity() {return university;}
+
+    public void setUniversity(String university) {this.university = university;}
 }

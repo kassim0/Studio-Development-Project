@@ -5,28 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eaeb9f3e-19b0-4647-b185-09086609e07e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learningboot/src/main/java/accesingdatamysql/entity/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/learningboot/src/main/java/accesingdatamysql/entity/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learningboot/target/classes/accesingdatamysql/entity/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/learningboot/target/classes/accesingdatamysql/entity/Course.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/controllers/CourseCreationMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/controllers/CourseCreationMenuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/controllers/CourseModifySelectionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/controllers/CourseModifySelectionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/controllers/SeeCoursesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/controllers/SeeCoursesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/CourseCreationMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/CourseCreationMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/CourseModifySelection.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/CourseModifySelection.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/LoginPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/LoginPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/SignUpPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/SignUpPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/StudyProgrammesPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/StudyProgrammesPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/StudyProgrammesPage2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/StudyProgrammesPage2.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/StudyProgrammesPage3.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/StudyProgrammesPage3.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/controllers/CourseCreationMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/controllers/CourseCreationMenuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/controllers/CourseModifySelectionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/controllers/CourseModifySelectionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/controllers/CourseViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/controllers/CourseViewController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/controllers/LearningAgreementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/controllers/LearningAgreementController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/controllers/SeeCoursesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/controllers/SeeCoursesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/controllers/StudyProgrammesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/controllers/StudyProgrammesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/courseView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/courseView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/seeCourses.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/seeCourses.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/studyStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/target/classes/erasmus/frontla/studyStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/controllers/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/controllers/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/objects/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/main/java/erasmus/frontla/objects/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/main/resources/erasmus/frontla/CourseCreationMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/src/main/resources/erasmus/frontla/CourseCreationMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd/src/main/resources/erasmus/frontla/CourseDescription.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd/target/classes/module-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +52,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FrontEnd" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
   </component>
   <component name="RunManager">
     <configuration name="1" type="Application" factoryName="Application">

@@ -16,14 +16,14 @@ public class HelloController {
 
     public String texto() throws Exception {
         CoursePetitions a = CoursePetitions.getInstance();
-        Course v=new Course("hola", "sdafda",3);
+        Course v=new Course("hola", "sdafda",3,"winter");
         v.setCredits(3);
         v.setDefinition("sdafda");
         v.setName("reer");
         a.createCourse(v);
 
 
-        Course v2=new Course("hola", "sdafda",3);
+        Course v2=new Course("hola", "sdafda",3,"summer");
         v.setCredits(3);
         v.setDefinition("mas descripcion");
         v.setName("cursoDos");

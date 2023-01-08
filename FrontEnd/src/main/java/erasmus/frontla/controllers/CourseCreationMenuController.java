@@ -2,6 +2,8 @@ package erasmus.frontla.controllers;
 import erasmus.frontla.Loader;
 import erasmus.frontla.endpoints.CoursePetitions;
 import erasmus.frontla.objects.Course;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,6 +16,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Optional;
 
 public class CourseCreationMenuController {
@@ -33,12 +37,22 @@ public class CourseCreationMenuController {
 
 
     @FXML
+    private ChoiceBox<String> semesterPick;
+
+
+    @FXML
     private Button backButton;
 
     @FXML
     private Button createButton;
 
     private String oldname;
+
+    public void initialize(){
+        ArrayList<String> listSeme=new ArrayList<String>(Arrays.asList("winter","summer","full year"));
+        ObservableList<String> list = FXCollections.observableArrayList(listSeme);
+        semesterPick.setItems(list);
+    }
 
     public void init(Course course) throws Exception {
         nameField.setText(course.getName());
@@ -47,6 +61,7 @@ public class CourseCreationMenuController {
         creditsField.setText(course.getCredits().toString());
         pageText.setText("Modify Course");
         createButton.setText("Modify");
+        semesterPick.setValue(course.getSemester());
 
     }
 
@@ -83,7 +98,7 @@ public class CourseCreationMenuController {
                 Optional<ButtonType> resultado = alerta.showAndWait();
             }
             else {
-                Course course = new Course(nameField.getText(), descriptionField.getText(), Integer.valueOf(creditsField.getText()));
+                Course course = new Course(nameField.getText(), descriptionField.getText(), Integer.valueOf(creditsField.getText()),semesterPick.getValue());
 
                 course.setName(nameField.getText());
                 course.setDefinition(descriptionField.getText());
@@ -92,10 +107,12 @@ public class CourseCreationMenuController {
                 CoursePetitions a = CoursePetitions.getInstance();
 
                 a.createCourse(course);
-                Alert alerta = new Alert(Alert.AlertType.CONFIRMATION);
-                alerta.setTitle("CONFIRMATION");
-                alerta.setHeaderText("A course has been created");
-                Optional<ButtonType> resultado = alerta.showAndWait();
+                if(createButton.getText().compareTo("Create")==0) {
+                    Alert alerta = new Alert(Alert.AlertType.CONFIRMATION);
+                    alerta.setTitle("CONFIRMATION");
+                    alerta.setHeaderText("A course has been created");
+                    Optional<ButtonType> resultado = alerta.showAndWait();
+                }
             }
         }
         else{
@@ -133,7 +150,7 @@ public class CourseCreationMenuController {
             else {
 
 
-                Course course = new Course(nameField.getText(), descriptionField.getText(), Integer.valueOf(creditsField.getText()));
+                Course course = new Course(nameField.getText(), descriptionField.getText(), Integer.valueOf(creditsField.getText()),semesterPick.getValue());
 
 
                 course.setName(nameField.getText());
@@ -205,7 +222,7 @@ public class CourseCreationMenuController {
         CourseModifySelectionController controller = paneL.getController();
         controller.init(1);
         Scene scene = new Scene(pane);
-        stage.setTitle("Modify");
+        stage.setTitle("Delete");
         stage.setScene(scene);
         stage.show();
         Node n = (Node)event.getSource();

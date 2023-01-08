@@ -10,12 +10,15 @@ public class Course {
 
      String definition;
 
-         Integer credits;
+     Integer credits;
 
-    public Course(String name, String definition, Integer credits) {
+     String semester;
+
+    public Course(String name, String definition, Integer credits,String semester) {
         this.name = name;
         this.definition = definition;
         this.credits = credits;
+        this.semester=semester;
     }
 
     public Integer getId() {
@@ -38,6 +41,14 @@ public class Course {
 
     public void setDefinition(String email) {
         this.definition = email;
+    }
+
+    public String getSemester() {
+        return semester;
+    }
+
+    public void setSemester(String semester) {
+        this.semester = semester;
     }
 
     public Integer getCredits() {

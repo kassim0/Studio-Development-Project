@@ -14,6 +14,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -34,6 +35,9 @@ public class CourseModifySelectionController {
     @FXML
     private Button modifyButton;
     public ObservableList<String> observableList;
+
+    @FXML
+    private Text pageText;
     int delete;
 
 
@@ -56,6 +60,8 @@ public class CourseModifySelectionController {
         delete=a;
         if(a==1){
             modifyButton.setText("Delete");
+            pageText.setText("Delete");
+
         }
         else{
             modifyButton.setText("Modify");

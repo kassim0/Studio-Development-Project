@@ -15,6 +15,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.net.URL;
@@ -24,7 +25,8 @@ import java.util.Optional;
 
 public class CourseModifySelectionController {
 
-
+    @FXML
+    private Text pageText;
     @FXML
     private ListView<String> listCourse;
 
@@ -56,6 +58,7 @@ public class CourseModifySelectionController {
         delete=a;
         if(a==1){
             modifyButton.setText("Delete");
+
         }
         else{
             modifyButton.setText("Modify");

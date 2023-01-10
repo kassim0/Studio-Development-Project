@@ -3,6 +3,7 @@ module erasmus.frontla {
     requires javafx.fxml;
     requires com.google.gson;
     requires java.net.http;
+    requires java.sql;
 
 
     opens erasmus.frontla to javafx.fxml;

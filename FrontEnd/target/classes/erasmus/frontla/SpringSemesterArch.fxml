@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="791.0" prefWidth="1225.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="erasmus.frontla.controllers.HomePageController">
+   <children>
+      <Pane layoutX="6.0" prefHeight="144.0" prefWidth="1066.0" style="-fx-background-color: rgba(42, 54, 59, 0.9);" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fx:id="name" fill="WHITE" layoutX="517.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NAME OF THE APP" wrappingWidth="233.0000548362732">
+               <font>
+                  <Font name="SansSerif Bold" size="25.0" />
+               </font>
+            </Text>
+            <Pane layoutX="423.0" layoutY="99.0">
+               <children>
+                  <HBox layoutX="32.0">
+                     <children>
+                        <Button fx:id="homeButton" mnemonicParsing="false" onAction="#homeView" style="-fx-background-color: none;" styleClass="homeButton" stylesheets="@studyStyle.css" text="HOME" textFill="WHITE" />
+                        <Button fx:id="studyButton" mnemonicParsing="false" onAction="#studyView" prefHeight="23.0" prefWidth="150.0" styleClass="studyButton" stylesheets="@studyStyle.css" text="STUDY PROGRAMMES" />
+                        <Button fx:id="laButton" mnemonicParsing="false" onAction="#laView" prefHeight="23.0" prefWidth="161.0" styleClass="laButton" stylesheets="@studyStyle.css" text="LEARNING AGREEMENT" />
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <Text fill="#f35f55" layoutX="745.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="." wrappingWidth="10.40625">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="48.0" />
+               </font>
+            </Text>
+            <Text fill="#f35f55" layoutX="573.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="." wrappingWidth="10.40625">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="48.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="6.0" layoutY="144.0" prefHeight="649.0" prefWidth="1225.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="144.0">
+         <children>
+            <Label layoutX="557.0" layoutY="29.0" prefHeight="25.0" prefWidth="121.0" styleClass="choose-faculty" stylesheets="@studyStyle.css" text="CHOOSE THE FACULTY" />
+            <Label fx:id="studyp" layoutX="472.0" layoutY="63.0" styleClass="studyProg" stylesheets="@studyStyle.css" text="Study Programmes" />
+         </children></Pane>
+   </children>
+</AnchorPane>

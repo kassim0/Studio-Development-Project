@@ -46,7 +46,7 @@ public class HomePageController {
     void signupView(ActionEvent event) throws IOException {
         Stage stage = new Stage();
         AnchorPane pane =  LoaderView("SignUpPage.fxml");
-        Scene scene = new Scene(pane);
+        Scene scene = new Scene(pane,900,600);
         stage.setTitle("Sign Up");
         stage.setScene(scene);
         stage.show();

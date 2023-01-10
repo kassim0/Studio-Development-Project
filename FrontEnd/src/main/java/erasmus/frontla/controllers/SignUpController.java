@@ -15,6 +15,7 @@ public class SignUpController {
     String jdbcURL = "jdbc:mysql://localhost:3306/learningagreementdb";
     String username = "root";
     String password = "";
+    int test=0;
 
     @FXML
     private Button createAnAccountButton;

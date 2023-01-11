@@ -7,12 +7,6 @@
     <list default="true" id="9072231f-9931-4fc9-ac46-47dedaece349" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackEnd/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/learningboot/src/main/java/accesingdatamysql/entity/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/learningboot/src/main/java/accesingdatamysql/entity/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/learningboot/target/classes/accesingdatamysql/controller/CourseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/learningboot/target/classes/accesingdatamysql/controller/CourseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/controllers/CourseCreationMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/controllers/CourseCreationMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/controllers/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/controllers/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/objects/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/objects/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/resources/erasmus/frontla/CourseCreationMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/main/resources/erasmus/frontla/CourseCreationMenu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +23,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/FrontEnd/src/main/resources/erasmus/frontla/SignUpPage.fxml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">

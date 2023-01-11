@@ -1,96 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="664.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="erasmus.frontla.controllers.LoginController">
    <children>
-      <BorderPane prefHeight="500.0" prefWidth="700.0">
-         <left>
-            <AnchorPane prefHeight="500.0" prefWidth="376.0" style="-fx-background-color: #212F3D;" BorderPane.alignment="CENTER">
+      <Pane layoutX="6.0" prefHeight="144.0" prefWidth="1440.0" style="-fx-background-color: rgba(42, 54, 59, 0.9);" styleClass="pane" stylesheets="@studyStyle.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane layoutX="423.0" layoutY="99.0" />
+            <HBox layoutY="92.0" prefHeight="34.0" prefWidth="1442.0" styleClass="menu" stylesheets="@studyStyle.css">
                <children>
-                  <Text fill="#fffefe" layoutX="65.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME BACK !">
-                     <font>
-                        <Font size="25.0" />
-                     </font>
-                  </Text>
-                  <Text fill="WHITE" layoutX="53.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You can sign in to access with your existing account." wrappingWidth="298.1093444824219">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Text>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="76.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../front/images/login.png" />
-                     </image>
-                  </ImageView>
-               </children></AnchorPane>
-         </left>
-         <center>
-            <AnchorPane prefHeight="500.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+                  <Button fx:id="homeButton" mnemonicParsing="false" onAction="#homeView" style="-fx-background-color: none;" styleClass="homeButton" stylesheets="@studyStyle.css" text="HOME" textFill="WHITE" />
+                  <Button fx:id="studyButton" mnemonicParsing="false" onAction="#studyView" prefHeight="23.0" prefWidth="150.0" styleClass="studyButton" stylesheets="@studyStyle.css" text="STUDY PROGRAMMES" />
+                  <Button fx:id="laButton" mnemonicParsing="false" onAction="#laView" prefHeight="23.0" prefWidth="161.0" styleClass="laButton" stylesheets="@studyStyle.css" text="LEARNING AGREEMENT" />
+               </children>
+            </HBox>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-2.0" layoutY="26.0" prefHeight="36.0" prefWidth="1440.0" styleClass="nameApp" stylesheets="@studyStyle.css" text="NAME OF THE APP" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="25.0" />
+               </font>
+            </Label>
+            <Text fill="#f35f55" layoutX="598.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="." textAlignment="CENTER" wrappingWidth="121.85156249999994">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="48.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane accessibleRole="SCROLL_PANE" layoutY="236.0" prefHeight="524.0" prefWidth="1444.0" style="-fx-background-color: #f2f3f4;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="139.0">
+         <children>
+            <Label fx:id="studyp" prefHeight="76.0" prefWidth="1448.0" styleClass="studyProg" stylesheets="@studyStyle.css" text="Sign in" textAlignment="CENTER">
+               <font>
+                  <Font size="55.0" />
+               </font>
+            </Label>
+            <Pane layoutX="134.0" layoutY="165.0" prefHeight="72.0" prefWidth="1140.0">
                <children>
-                  <TextField layoutX="64.0" layoutY="198.0" prefHeight="27.0" prefWidth="183.0" promptText="e-mail" style="-fx-background-color: transparent; -fx-border-color: #212F3D; -fx-border-width: 0px 0px 2px 0px;" />
-                  <PasswordField layoutX="61.0" layoutY="267.0" prefHeight="27.0" prefWidth="186.0" promptText="password" style="-fx-background-color: transparent; -fx-border-color: #212F3D; -fx-border-width: 0px 0px 2px 0px;" />
-                  <Button layoutX="90.0" layoutY="366.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="177.0" style="-fx-background-color: #212F3D; -fx-background-radius: 40;" text="SIGN IN" textFill="#fffbfb">
+                  <Label prefHeight="27.19" prefWidth="86.7" text="Email">
                      <font>
-                        <Font name="System Bold Italic" size="19.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="267.0" layoutY="6.0" minHeight="20.0" minWidth="42.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="42.0" style="-fx-background-color: ffff;" textFill="#f2f0f0" />
-                  <CheckBox layoutX="25.0" layoutY="328.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="130.0" text="Remember me!" textFill="#7b8686">
-                     <font>
-                        <Font size="10.0" />
-                     </font>
-                  </CheckBox>
-                  <Hyperlink layoutX="172.0" layoutY="328.0" text="forget password?">
-                     <font>
-                        <Font size="10.0" />
-                     </font>
-                  </Hyperlink>
-                  <Label layoutX="106.0" layoutY="420.0" text="New here?" textFill="#7b8686">
-                     <font>
-                        <Font size="10.0" />
+                        <Font name="System Bold" size="16.0" />
                      </font>
                   </Label>
-                  <Hyperlink layoutX="158.0" layoutY="417.0" text="create an account">
-                     <font>
-                        <Font size="10.0" />
-                     </font>
-                  </Hyperlink>
-                  <Text layoutX="79.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USER LOGIN">
-                     <font>
-                        <Font name="System Bold" size="23.0" />
-                     </font>
-                  </Text>
-                  <ImageView fitHeight="23.0" fitWidth="32.0" layoutX="29.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../front/images/mail_icon.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="23.0" fitWidth="32.0" layoutX="29.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true" style="-fx-blend-mode: ffff;">
-                     <image>
-                        <Image url="@../../../../../front/images/key_icon.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="26.0" fitWidth="24.0" layoutX="286.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../front/images/close.png" />
-                     </image>
-                  </ImageView>
-
+                  <TextField fx:id="emailInput" layoutX="-3.0" layoutY="33.0" prefHeight="45.0" prefWidth="1140.0" />
                </children>
-            </AnchorPane>
-         </center>
-      </BorderPane>
+            </Pane>
+            <Pane layoutX="134.0" layoutY="271.0" prefHeight="72.0" prefWidth="1139.0">
+               <children>
+                  <Label prefHeight="27.19" prefWidth="86.7" text="Password">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="passwordInput" layoutX="-3.0" layoutY="33.0" prefHeight="45.19" prefWidth="1140.0" />
+               </children>
+            </Pane>
+            <Button fx:id="login" onAction="#login" layoutX="1171.0" layoutY="404.0" mnemonicParsing="false" text="log in" />
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

@@ -2,12 +2,19 @@ package erasmus.frontla.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+import static erasmus.frontla.Loader.LoaderView;
 
 public class SignUpController {
 
@@ -15,7 +22,6 @@ public class SignUpController {
     String jdbcURL = "jdbc:mysql://localhost:3306/learningagreementdb";
     String username = "root";
     String password = "";
-    int test=0;
 
     @FXML
     private Button createAnAccountButton;
@@ -77,18 +83,39 @@ public class SignUpController {
         }
     }
     @FXML
-    void homeView(ActionEvent event) {
-
+    void homeView(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        AnchorPane pane =  LoaderView("HomePageTeste.fxml");
+        Scene scene = new Scene(pane);
+        stage.setTitle("Home");
+        stage.setScene(scene);
+        stage.show();
+        Node n = (Node)event.getSource();
+        n.getScene().getWindow().hide();
     }
 
     @FXML
-    void laView(ActionEvent event) {
-
+    void laView(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        AnchorPane pane =  LoaderView("LearningAgreement.fxml");
+        Scene scene = new Scene(pane);
+        stage.setTitle("LEARNING AGREEMENT");
+        stage.setScene(scene);
+        stage.show();
+        Node n = (Node)event.getSource();
+        n.getScene().getWindow().hide();
     }
 
     @FXML
-    void studyView(ActionEvent event) {
-
+    void studyView(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        AnchorPane pane =  LoaderView("StudyProgrammesPage.fxml");
+        Scene scene = new Scene(pane);
+        stage.setTitle("Study Programmes");
+        stage.setScene(scene);
+        stage.show();
+        Node n = (Node)event.getSource();
+        n.getScene().getWindow().hide();
     }
 
 }

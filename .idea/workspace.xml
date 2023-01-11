@@ -5,44 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9072231f-9931-4fc9-ac46-47dedaece349" name="Changes" comment="Sign up page v1">
-      <change afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/Comments.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/HomePageTeste.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/LearningAgreement.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/LoginPage.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/SemesterMobility.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/SemesterMobility2.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/SemesterMobility3.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/SemesterMobility4.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/SignUpPage.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/SpringSemesterArch.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/StudyProgrammesPage.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/StudyProgrammesPage2.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/StudyProgrammesPage3.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/WinterSemesterArch.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/controllers/HomePageController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/controllers/LearningAgreementController$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/controllers/LearningAgreementController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/controllers/LoginController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/controllers/SignUpController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/controllers/StudyProgrammesController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/laStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/studyStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/learningboot/target/classes/accesingdatamysql/LearningbootApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/learningboot/target/classes/accesingdatamysql/LearningbootApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/learningboot/target/classes/accesingdatamysql/controller/CourseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/learningboot/target/classes/accesingdatamysql/controller/CourseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/learningboot/target/classes/accesingdatamysql/entity/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/learningboot/target/classes/accesingdatamysql/entity/Course.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/learningboot/target/classes/accesingdatamysql/repository/CourseRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/learningboot/target/classes/accesingdatamysql/repository/CourseRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/learningboot/target/test-classes/learningboot/learningboot/LearningbootApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/learningboot/target/test-classes/learningboot/learningboot/LearningbootApplicationTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/FrontLA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/FrontLA.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/controllers/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/controllers/HomePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/controllers/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/controllers/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/controllers/SignUpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/resources/erasmus/frontla/SignUpPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/main/resources/erasmus/frontla/SignUpPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/HelloApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/HelloApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/controllers/SeeCoursesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/controllers/SeeCoursesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/resources/erasmus/frontla/LoginPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/main/resources/erasmus/frontla/LoginPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/LoginPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/LoginPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/controllers/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/controllers/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/controllers/SignUpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/target/classes/erasmus/frontla/controllers/SignUpController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,17 +80,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/kassi/IdeaProjects/JavaFXProject&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/kassi/IdeaProjects/demoDB",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Usuario\Desktop\Estudios\Erasmus\Studio-Development-Project\FrontEnd\src\main\java\endpoints" />
@@ -172,7 +141,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673355044219</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Sign up page v1">
+      <created>1673381596756</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673381596756</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Sign up page v1">
+      <created>1673385130285</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673385130285</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

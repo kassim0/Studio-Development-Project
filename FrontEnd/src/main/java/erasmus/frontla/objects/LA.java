@@ -1,15 +1,10 @@
-package accesingdatamysql.entity;
+package erasmus.frontla.objects;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import java.util.List;
 
-@Entity // This tells Hibernate to make a table out of this class
+
 public class LA {
-    @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+
     public Integer id;
 
     public String student;
@@ -80,5 +75,5 @@ public class LA {
     public void setSupervisor2(String supervisor2) {
         this.supervisor2 = supervisor2;
     }
-
+    
 }

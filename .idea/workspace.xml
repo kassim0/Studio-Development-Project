@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9072231f-9931-4fc9-ac46-47dedaece349" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/learningboot/src/main/java/accesingdatamysql/entity/LA.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/learningboot/src/main/java/accesingdatamysql/entity/LA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/endpoints/LAPetitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/main/java/erasmus/frontla/endpoints/LAPetitions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +71,8 @@
       <recent name="erasmus.frontla" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="erasmus.frontla.endpoints" />
+      <recent name="erasmus.frontla.objects" />
       <recent name="erasmus.frontla.controllers" />
     </key>
   </component>

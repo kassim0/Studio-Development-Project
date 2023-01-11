@@ -4,6 +4,7 @@ module erasmus.frontla {
     requires com.google.gson;
     requires java.net.http;
     requires java.desktop;
+    requires java.sql;
 
 
     opens erasmus.frontla to javafx.fxml;
